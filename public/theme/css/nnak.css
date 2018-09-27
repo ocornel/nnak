@@ -1,0 +1,20 @@
+.main-nav {
+    background: #0C9AD9;
+}
+
+.main-nav-items a {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.main-nav-items a:hover {
+    color: #0DFC03;
+}
+
+.main-nav-items .active {
+    color: #0DFC03;
+}
+

@@ -14,7 +14,8 @@
 Route::get('/', function () {
 //    return view('welcome');
     return view('index');
-});
+})->name('index');
+Route::get('/contact', 'HomeController@index')->name('home');
 
 Auth::routes();
 
