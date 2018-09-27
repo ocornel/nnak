@@ -135,7 +135,7 @@
             <div class="col-sm-6 col-md-6 col-lg-6">
               <div class="wow fadeInLeft" data-wow-delay="0.1s">
                 <div class="text-left">
-                  <p>&copy;Copyright - Medicio Theme. All rights reserved.</p>
+                  <p>&copy;Copyright {{ date("Y") }}- NNAK Mombasa. All rights reserved.</p>
                 </div>
               </div>
             </div>
@@ -143,13 +143,7 @@
               <div class="wow fadeInRight" data-wow-delay="0.1s">
                 <div class="text-right">
                   <div class="credits">
-                    <!--
-                      All the links in the footer should remain intact. 
-                      You can delete the links only if you purchased the pro version.
-                      Licensing information: https://bootstrapmade.com/license/
-                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medicio
-                    -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    Built by <a href="https://profile.quickwapps.com/">Cornel</a>
                   </div>
                 </div>
               </div>

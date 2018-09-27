@@ -8,10 +8,13 @@
     <li><a href="#facilities">Facilities</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li class="dropdown">
-        <a href="#" class="dropdown-toggle red" data-toggle="dropdown">
-            <span class="red badge custom-badge">Admin Only<b class="caret"></b></span></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            {{--<span class="badge custom-badge red pull-right">Extra</span>--}}
+            More <b class="caret"></b></a>
         <ul class="dropdown-menu">
-            <li><a href="#">Edit Content</a></li>
+            <li><a href="public_theme.blade.php">Home CTA</a></li>
+            <li><a href="../../../public/theme/index-form.html">Home Form</a></li>
+            <li><a href="../../../public/theme/index-video.html">Home video</a></li>
         </ul>
     </li>
 @endsection
@@ -28,7 +31,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                            <h2 class="h-ultra">Reach out to us</h2>
+                            <h2 class="h-ultra">Medicio medical group</h2>
                         </div>
                         <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
                             <h4 class="h-light">Provide best quality healthcare for you</h4>

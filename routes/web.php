@@ -11,11 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-//    return view('welcome');
-    return view('index');
-})->name('index');
-Route::get('/contact', 'HomeController@index')->name('home');
+//Route::get('/', function () {
+////    return view('welcome');
+//    return view('index');
+//})->name('index');
+Route::get('/', 'PageController@index_page')->name('index');
+Route::get('/contact_us', 'PageController@contact_page')->name('contact');
+Route::get('/statement', 'PageController@statement_page')->name('statement');
+Route::get('/events', 'PageController@events_page')->name('events');
 
 Auth::routes();
 
