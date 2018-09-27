@@ -10,20 +10,20 @@
   <title>Medicio landing page template for Health niche</title>
 
   <!-- css -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css">
-  <link href="css/nivo-lightbox.css" rel="stylesheet" />
-  <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-  <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
-  <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
-  <link href="css/animate.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{{URL::to('theme/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{URL::to('theme/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="{{URL::to('theme/plugins/cubeportfolio/css/cubeportfolio.min.css')}}">
+  <link href="{{URL::to('theme/css/nivo-lightbox.css')}}" rel="stylesheet" />
+  <link href="{{URL::to('theme/css/nivo-lightbox-theme/default/default.css')}}" rel="stylesheet" type="text/css" />
+  <link href="{{URL::to('theme/css/owl.carousel.css')}}" rel="stylesheet" media="screen" />
+  <link href="{{URL::to('theme/css/owl.theme.css')}}" rel="stylesheet" media="screen" />
+  <link href="{{URL::to('theme/css/animate.css')}}" rel="stylesheet" />
+  <link href="{{URL::to('theme/css/style.css')}}" rel="stylesheet">
 
   <!-- boxed bg -->
-  <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+  <link id="bodybg" href="{{URL::to('theme/bodybg/bg1.css')}}" rel="stylesheet" type="text/css" />
   <!-- template skin -->
-  <link id="t-colors" href="color/default.css" rel="stylesheet">
+  <link id="t-colors" href="{{URL::to('theme/color/default.css')}}" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: Medicio
@@ -57,8 +57,8 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-          <a class="navbar-brand" href="index.html">
-                    <img src="img/logo.png" alt="" width="150" height="40" />
+          <a class="navbar-brand" href="index.blade.php">
+                    <img src="{{ URL::to('theme/img/logo.png')}}" alt="" width="150" height="40" />
                 </a>
         </div>
 
@@ -73,9 +73,9 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="index.html">Home CTA</a></li>
-                <li><a href="index-form.html">Home Form</a></li>
-                <li><a href="index-video.html">Home video</a></li>
+                <li><a href="index.blade.php">Home CTA</a></li>
+                <li><a href="../../public/theme/index-form.html">Home Form</a></li>
+                <li><a href="../../public/theme/index-video.html">Home video</a></li>
               </ul>
             </li>
           </ul>
@@ -115,7 +115,7 @@
             </div>
             <div class="col-lg-6">
               <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-                <img src="img/dummy/img-1.png" class="img-responsive" alt="" />
+                <img src="{{ URL::to('theme/img/dummy/img-1.png')}}" class="img-responsive" alt="" />
               </div>
             </div>
           </div>
@@ -212,7 +212,6 @@
       </div>
     </section>
 
-
     <!-- Section: services -->
     <section id="service" class="home-section nopadding paddingtop-60">
 
@@ -221,7 +220,7 @@
         <div class="row">
           <div class="col-sm-6 col-md-6">
             <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <img src="img/dummy/img-1.jpg" class="img-responsive" alt="" />
+              <img src="{{ URL::to('theme/img/dummy/img-1.jpg')}}" class="img-responsive" alt="" />
             </div>
           </div>
           <div class="col-sm-3 col-md-3">
@@ -342,9 +341,9 @@
             <div id="grid-container" class="cbp-l-grid-team">
               <ul>
                 <li class="cbp-item psychiatrist">
-                  <a href="doctors/member1.html" class="cbp-caption cbp-singlePage">
+                  <a href="../../public/theme/doctors/member1.html" class="cbp-caption cbp-singlePage">
                     <div class="cbp-caption-defaultWrap">
-                      <img src="img/team/1.jpg" alt="" width="100%">
+                      <img src="{{ URL::to('theme/img/team/1.jpg')}}" alt="" width="100%">
                     </div>
                     <div class="cbp-caption-activeWrap">
                       <div class="cbp-l-caption-alignCenter">
@@ -354,13 +353,13 @@
                       </div>
                     </div>
                   </a>
-                  <a href="doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice Grue</a>
+                  <a href="../../public/theme/doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice Grue</a>
                   <div class="cbp-l-grid-team-position">Psychiatrist</div>
                 </li>
                 <li class="cbp-item cardiologist">
-                  <a href="doctors/member2.html" class="cbp-caption cbp-singlePage">
+                  <a href="../../public/theme/doctors/member2.html" class="cbp-caption cbp-singlePage">
                     <div class="cbp-caption-defaultWrap">
-                      <img src="img/team/2.jpg" alt="" width="100%">
+                      <img src="{{ URL::to('theme/img/team/2.jpg')}}" alt="" width="100%">
                     </div>
                     <div class="cbp-caption-activeWrap">
                       <div class="cbp-l-caption-alignCenter">
@@ -370,13 +369,13 @@
                       </div>
                     </div>
                   </a>
-                  <a href="doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph Murphy</a>
+                  <a href="../../public/theme/doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph Murphy</a>
                   <div class="cbp-l-grid-team-position">Cardiologist</div>
                 </li>
                 <li class="cbp-item cardiologist">
-                  <a href="doctors/member3.html" class="cbp-caption cbp-singlePage">
+                  <a href="../../public/theme/doctors/member3.html" class="cbp-caption cbp-singlePage">
                     <div class="cbp-caption-defaultWrap">
-                      <img src="img/team/3.jpg" alt="" width="100%">
+                      <img src="{{ URL::to('theme/img/team/3.jpg')}}" alt="" width="100%">
                     </div>
                     <div class="cbp-caption-activeWrap">
                       <div class="cbp-l-caption-alignCenter">
@@ -386,13 +385,13 @@
                       </div>
                     </div>
                   </a>
-                  <a href="doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison Davis</a>
+                  <a href="../../public/theme/doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison Davis</a>
                   <div class="cbp-l-grid-team-position">Cardiologist</div>
                 </li>
                 <li class="cbp-item neurologist">
-                  <a href="doctors/member4.html" class="cbp-caption cbp-singlePage">
+                  <a href="../../public/theme/doctors/member4.html" class="cbp-caption cbp-singlePage">
                     <div class="cbp-caption-defaultWrap">
-                      <img src="img/team/4.jpg" alt="" width="100%">
+                      <img src="{{ URL::to('theme/img/team/4.jpg')}}" alt="" width="100%">
                     </div>
                     <div class="cbp-caption-activeWrap">
                       <div class="cbp-l-caption-alignCenter">
@@ -402,7 +401,7 @@
                       </div>
                     </div>
                   </a>
-                  <a href="doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam Taylor</a>
+                  <a href="../../public/theme/doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam Taylor</a>
                   <div class="cbp-l-grid-team-position">Neurologist</div>
                 </li>
 
@@ -438,12 +437,12 @@
           <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="wow bounceInUp" data-wow-delay="0.2s">
               <div id="owl-works" class="owl-carousel">
-                <div class="item"><a href="img/photo/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg"><img src="img/photo/1.jpg" class="img-responsive" alt="img"></a></div>
-                <div class="item"><a href="img/photo/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/2@2x.jpg"><img src="img/photo/2.jpg" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="img/photo/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/3@2x.jpg"><img src="img/photo/3.jpg" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="img/photo/4.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/4@2x.jpg"><img src="img/photo/4.jpg" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="img/photo/5.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/5@2x.jpg"><img src="img/photo/5.jpg" class="img-responsive " alt="img"></a></div>
-                <div class="item"><a href="img/photo/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/6@2x.jpg"><img src="img/photo/6.jpg" class="img-responsive " alt="img"></a></div>
+                <div class="item"><a href="../../public/theme/img/photo/1.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg')}}"><img src="{{ URL::to('theme/img/photo/1.jpg')}}" class="img-responsive" alt="img"></a></div>
+                <div class="item"><a href="../../public/theme/img/photo/2.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/2@2x.jpg')}}"><img src="{{ URL::to('theme/img/photo/2.jpg')}}" class="img-responsive " alt="img"></a></div>
+                <div class="item"><a href="../../public/theme/img/photo/3.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/3@2x.jpg')}}"><img src="{{ URL::to('theme/img/photo/3.jpg')}}" class="img-responsive " alt="img"></a></div>
+                <div class="item"><a href="../../public/theme/img/photo/4.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/4@2x.jpg')}}"><img src="{{ URL::to('theme/img/photo/4.jpg')}}" class="img-responsive " alt="img"></a></div>
+                <div class="item"><a href="../../public/theme/img/photo/5.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/5@2x.jpg')}}"><img src="{{ URL::to('theme/img/photo/5.jpg')}}" class="img-responsive " alt="img"></a></div>
+                <div class="item"><a href="../../public/theme/img/photo/6.jpg')}}" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/6@2x.jpg')}}"><img src="{{ URL::to('theme/img/photo/6.jpg')}}" class="img-responsive " alt="img"></a></div>
               </div>
             </div>
           </div>
@@ -473,7 +472,7 @@
                       <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                     </div>
                     <div class="person-text rel text-light">
-                      <img src="img/testimonials/1.jpg" alt="" class="person img-circle" />
+                      <img src="{{ URL::to('theme/img/testimonials/1.jpg')}}" alt="" class="person img-circle" />
                       <a title="" href="#">Anna</a>
                       <span>Chicago, Illinois</span>
                     </div>
@@ -489,7 +488,7 @@
                       <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                     </div>
                     <div class="person-text rel text-light">
-                      <img src="img/testimonials/2.jpg" alt="" class="person img-circle" />
+                      <img src="{{ URL::to('theme/img/testimonials/2.jpg')}}" alt="" class="person img-circle" />
                       <a title="" href="#">Matthew G</a>
                       <span>San Antonio, Texas</span>
                     </div>
@@ -504,7 +503,7 @@
                       <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                     </div>
                     <div class="person-text rel text-light">
-                      <img src="img/testimonials/3.jpg" alt="" class="person img-circle" />
+                      <img src="{{ URL::to('theme/img/testimonials/3.jpg')}}" alt="" class="person img-circle" />
                       <a title="" href="#">Scarlet Smith</a>
                       <span>Dallas, Texas</span>
                     </div>
@@ -521,7 +520,7 @@
                       <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                     </div>
                     <div class="person-text rel text-light">
-                      <img src="img/testimonials/4.jpg" alt="" class="person img-circle" />
+                      <img src="{{ URL::to('theme/img/testimonials/4.jpg')}}" alt="" class="person img-circle" />
                       <a title="" href="#">Lucas Thompson</a>
                       <span>Austin, Texas</span>
                     </div>
@@ -537,7 +536,7 @@
                       <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                     </div>
                     <div class="person-text rel text-light">
-                      <img src="img/testimonials/5.jpg" alt="" class="person img-circle" />
+                      <img src="{{ URL::to('theme/img/testimonials/5.jpg')}}" alt="" class="person img-circle" />
                       <a title="" href="#">Ella Mentree</a>
                       <span>Fort Worth, Texas</span>
                     </div>
@@ -552,7 +551,7 @@
                       <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                     </div>
                     <div class="person-text rel text-light">
-                      <img src="img/testimonials/6.jpg" alt="" class="person img-circle" />
+                      <img src="{{ URL::to('theme/img/testimonials/6.jpg')}}" alt="" class="person img-circle" />
                       <a title="" href="#">Suzanne Adam</a>
                       <span>Detroit, Michigan</span>
                     </div>
@@ -679,22 +678,22 @@
         <div class="row">
           <div class="col-sm-6 col-md-3">
             <div class="partner">
-              <a href="#"><img src="img/dummy/partner-1.jpg" alt="" /></a>
+              <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-1.jpg')}}" alt="" /></a>
             </div>
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="partner">
-              <a href="#"><img src="img/dummy/partner-2.jpg" alt="" /></a>
+              <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-2.jpg')}}" alt="" /></a>
             </div>
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="partner">
-              <a href="#"><img src="img/dummy/partner-3.jpg" alt="" /></a>
+              <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-3.jpg')}}" alt="" /></a>
             </div>
           </div>
           <div class="col-sm-6 col-md-3">
             <div class="partner">
-              <a href="#"><img src="img/dummy/partner-4.jpg" alt="" /></a>
+              <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-4.jpg')}}" alt="" /></a>
             </div>
           </div>
         </div>
@@ -814,17 +813,17 @@
   <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
   <!-- Core JavaScript Files -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/jquery.scrollTo.js"></script>
-  <script src="js/jquery.appear.js"></script>
-  <script src="js/stellar.js"></script>
-  <script src="plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/nivo-lightbox.min.js"></script>
-  <script src="js/custom.js"></script>
+  <script src="{{URL::to('theme/js/jquery.min.js')}}"></script>
+  <script src="{{URL::to('theme/js/bootstrap.min.js')}}"></script>
+  <script src="{{URL::to('theme/js/jquery.easing.min.js')}}"></script>
+  <script src="{{URL::to('theme/js/wow.min.js')}}"></script>
+  <script src="{{URL::to('theme/js/jquery.scrollTo.js')}}"></script>
+  <script src="{{URL::to('theme/js/jquery.appear.js')}}"></script>
+  <script src="{{URL::to('theme/js/stellar.js')}}"></script>
+  <script src="{{URL::to('theme/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js')}}"></script>
+  <script src="{{URL::to('theme/js/owl.carousel.min.js')}}"></script>
+  <script src="{{URL::to('theme/js/nivo-lightbox.min.js')}}"></script>
+  <script src="{{URL::to('theme/js/custom.js')}}"></script>
 
 </body>
 
