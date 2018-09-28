@@ -17,7 +17,7 @@
 //})->name('index');
 Route::get('/', 'PageController@index_page')->name('index');
 Route::get('/contact_us', 'PageController@contact_page')->name('contact');
-Route::get('/statement', 'PageController@statement_page')->name('statement');
+Route::get('/about', 'PageController@about_page')->name('about');
 Route::get('/events', 'PageController@events_page')->name('events');
 
 Auth::routes();

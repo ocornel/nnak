@@ -91,8 +91,8 @@ class PageController extends Controller
             return view('contact');
     }
 
-    public function statement_page() {
-            return view('statement');
+    public function about_page() {
+            return view('about');
     }
 
     public function events_page() {

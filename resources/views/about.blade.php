@@ -1,5 +1,8 @@
 @extends('layouts.public_theme')
 
+@section('title')
+    About
+@endsection
 
 @section('page_nav')
     <li class="active"><a href="#intro">Home</a></li>
@@ -18,11 +21,6 @@
         </ul>
     </li>
 @endsection
-
-@section('title')
-    Home
-@endsection
-
 @section('content')
     <!-- Section: intro -->
     <section id="intro" class="intro">

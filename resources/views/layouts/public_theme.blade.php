@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>NNAK Mombasa County | @yield('title')</title>
+  <title>NNAK PIB-Mombasa County | @yield('title')</title>
 
   <!-- css -->
   <link href="{{URL::to('theme/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
@@ -30,6 +30,7 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+{{--National Nurses Association of Kenya Private Instituitions Branch- Mombasa County(NNAK PIB-Mombasa County)--}}
   <div id="wrapper">
 
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -65,12 +66,34 @@
             </div>
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
+                @if (Route::has('login'))
+                  <div class="top-right links">
+                    @auth
+                      <a href="{{ route('home') }}">Admin</a>
+                    @else
+                      <a href="{{ route('login') }}">Admin</a>
+                      {{--<a href="{{ route('register') }}">Register</a>--}}
+                    @endauth
+                  </div>
+                @endif
+              </div>
+              <div class="widget">
                 <h5>Information</h5>
                 <ul>
                   <li><a href="#">Home</a></li>
                   <li><a href="#">Laboratory</a></li>
                   <li><a href="#">Medical treatment</a></li>
                   <li><a href="#">Terms & conditions</a></li>
+                  @if (Route::has('login'))
+                    <li class="break-li">
+                      @auth
+                        <a href="{{ route('home') }}">Admin</a>
+                      @else
+                        <a href="{{ route('login') }}">Admin</a>
+                        {{--<a href="{{ route('register') }}">Register</a>--}}
+                      @endauth
+                    </li>
+                  @endif
                 </ul>
               </div>
             </div>

@@ -1303,6 +1303,7 @@ footer .widget h5 {
 	font-size: 20px;
 	margin-bottom: 10px;
 	text-transform: uppercase;
+    border-bottom: solid 2px var(--nnak-green);
 }
 
 

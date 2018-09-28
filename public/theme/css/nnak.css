@@ -1,6 +1,11 @@
 .main-nav {
     background: #0C9AD9;
 }
+:root {
+    --nnak-green: #0DFC03;
+    --nnak-red: #FE0002;
+    --nnak-blue: #0C9AD9;
+}
 
 .main-nav-items a {
     padding-left: 10px;
@@ -11,13 +16,24 @@
 }
 
 .main-nav-items a:hover {
-    color: #0DFC03;
+    color: var(--nnak-green);
 }
 
 .main-nav-items .active {
-    color: #0DFC03;
+    color: var(--nnak-green);
+
 }
 
 .red {
-    background: #FE0002;
+    background: var(--nnak-red);
+}
+
+.break-li {
+    margin-top: 10px;
+    border-top: dotted 1px;
+}
+
+footer .widget h5 {
+    border-bottom: solid 6px var(--nnak-green);
+    padding-bottom: 5px;
 }
