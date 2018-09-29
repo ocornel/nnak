@@ -1103,7 +1103,7 @@ Elements
 Testimonial
 =========================== */
 
-#testimonial {
+.testimonial {
 	background-image: url(../img/parallax/1.jpg);
 }
 

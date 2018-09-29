@@ -554,7 +554,7 @@
 
 
     <!-- Section: testimonial -->
-    <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
+    <section id="testimonial" class="home-section paddingbot-60 parallax testimonial" data-stellar-background-ratio="0.5">
 
         <div class="carousel-reviews broun-block">
             <div class="container">
