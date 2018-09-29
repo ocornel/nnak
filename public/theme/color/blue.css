@@ -1,35 +1,35 @@
 /*
-#1 color = #299dcc;
+#1 color = var(--nnak-blue);
 #2 color = #0d8ebd;
 */
 
 a:hover,
 a:focus {
-    color: #299dcc;
+    color: var(--nnak-blue);
 }
 
 
 .con1 > div, .con2 > div, .con3 > div { 
-	background-color: #299dcc;
+	background-color: var(--nnak-blue);
 }
 
 .scrollup:hover {
-	background: #299dcc;
+	background: var(--nnak-blue);
 }
 
 
 /* service */
 
 .service-icon span {
-	color: #299dcc;
+	color: var(--nnak-blue);
 }
 
 
 
 /* button */
 .btn-skin {
-  background-color: #299dcc;
-  border-color: #299dcc;
+  background-color: var(--nnak-blue);
+  border-color: var(--nnak-blue);
 }
 
 
@@ -52,19 +52,19 @@ a:focus {
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: #299dcc;
+    background-color: var(--nnak-blue);
 }
 
 
 .bg-skin {
-	background: #299dcc;
+	background: var(--nnak-blue);
 }
 
 .highlight-color {
-	background-color: #299dcc;
+	background-color: var(--nnak-blue);
 }
 .color {
-	color: #299dcc;
+	color: var(--nnak-blue);
 }
 
 /* pricing box  */
@@ -72,7 +72,7 @@ a:focus {
 	background-color:#0d8ebd;
 }
 .pricing-content.featured h3 {
-	background:#299dcc;
+	background:var(--nnak-blue);
 }
 
 
@@ -81,14 +81,14 @@ a:focus {
 
 
 form#contact-form input:focus,form#contact-form select:focus,form#contact-form textarea:focus {
-	border-color: #299dcc;
+	border-color: var(--nnak-blue);
 }
 form.search-form input:focus {
-	border-color: #299dcc;
+	border-color: var(--nnak-blue);
 }
 
 /* footer */
 ul.footer-menu li a:hover {
-	color: #299dcc;
+	color: var(--nnak-blue);
 }
 

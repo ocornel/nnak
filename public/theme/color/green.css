@@ -1,38 +1,38 @@
 /*
-#1 color = #93c847;
+#1 color = var(--nnak-green);
 #2 color = #65b037;
 */
 
 a:hover,
 a:focus {
-    color: #93c847;
+    color: var(--nnak-green);
 }
 
 .circled {
-	background: #93c847;
+	background: var(--nnak-green);
 }
 
 .con1 > div, .con2 > div, .con3 > div { 
-	background-color: #93c847;
+	background-color: var(--nnak-green);
 }
 
 .scrollup:hover {
-	background: #93c847;
+	background: var(--nnak-green);
 }
 
 
 /* service */
 
 .service-icon span {
-	color: #93c847;
+	color: var(--nnak-green);
 }
 
 
 
 /* button */
 .btn-skin {
-  background-color: #93c847;
-  border-color: #93c847;
+  background-color: var(--nnak-green);
+  border-color: var(--nnak-green);
 }
 
 
@@ -55,19 +55,19 @@ a:focus {
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: #93c847;
+    background-color: var(--nnak-green);
 }
 
 
 .bg-skin {
-	background: #93c847;
+	background: var(--nnak-green);
 }
 
 .highlight-color {
-	background-color: #93c847;
+	background-color: var(--nnak-green);
 }
 .color {
-	color: #93c847;
+	color: var(--nnak-green);
 }
 
 /* pricing box  */
@@ -75,7 +75,7 @@ a:focus {
 	background-color:#65b037;
 }
 .pricing-content.featured h3 {
-	background:#93c847;
+	background:var(--nnak-green);
 }
 
 
@@ -86,13 +86,13 @@ a:focus {
 }
 
 .cbp-l-filters-button .cbp-filter-counter {
-	background-color: #93c847;
+	background-color: var(--nnak-green);
 }
 
 .cbp-l-filters-alignLeft .cbp-filter-item-active {
     /* @editable properties */
-    background-color: #93c847;
-    border:1px solid #93c847;
+    background-color: var(--nnak-green);
+    border:1px solid var(--nnak-green);
 }
 
 .cbp-l-filters-dropdownWrap {
@@ -100,17 +100,17 @@ a:focus {
     width: 200px;
     position: absolute;
     right: 0;
-    background: #93c847;
+    background: var(--nnak-green);
 }
 .cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active {
     /* @editable properties */
-    background-color: #93c847;
-    border-color: #93c847;
+    background-color: var(--nnak-green);
+    border-color: var(--nnak-green);
 }
 .cbp-l-caption-buttonLeft,
 .cbp-l-caption-buttonRight {
     /* @editable properties */
-    background-color: #93c847;
+    background-color: var(--nnak-green);
 }
 
 .cbp-l-caption-buttonLeft:hover,

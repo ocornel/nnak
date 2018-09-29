@@ -1,38 +1,38 @@
 /*
-#1 color = #4ACCD1;
+#1 color = var(--nnak-blue);
 #2 color = #3fbbc0;
 */
 
 a:hover,
 a:focus {
-    color: #4ACCD1;
+    color: var(--nnak-blue);
 }
 
 .circled {
-	background: #4ACCD1;
+	background: var(--nnak-blue);
 }
 
 .con1 > div, .con2 > div, .con3 > div { 
-	background-color: #4ACCD1;
+	background-color: var(--nnak-blue);
 }
 
 .scrollup:hover {
-	background: #4ACCD1;
+	background: var(--nnak-blue);
 }
 
 
 /* service */
 
 .service-icon span {
-	color: #4ACCD1;
+	color: var(--nnak-blue);
 }
 
 
 
 /* button */
 .btn-skin {
-  background-color: #4ACCD1;
-  border-color: #4ACCD1;
+  background-color: var(--nnak-blue);
+  border-color: var(--nnak-blue);
 }
 
 
@@ -55,19 +55,19 @@ a:focus {
 
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: #4ACCD1;
+    background-color: var(--nnak-blue);
 }
 
 
 .bg-skin {
-	background: #4ACCD1;
+	background: var(--nnak-blue);
 }
 
 .highlight-color {
-	background-color: #4ACCD1;
+	background-color: var(--nnak-blue);
 }
 .color {
-	color: #4ACCD1;
+	color: var(--nnak-blue);
 }
 
 /* pricing box  */
@@ -75,7 +75,7 @@ a:focus {
 	background-color:#3fbbc0;
 }
 .pricing-content.featured h3 {
-	background:#4ACCD1;
+	background:var(--nnak-blue);
 }
 
 
@@ -86,27 +86,27 @@ a:focus {
 }
 
 .cbp-l-filters-button .cbp-filter-counter {
-	background-color: #4ACCD1;
+	background-color: var(--nnak-blue);
 }
 
 .cbp-l-filters-alignLeft .cbp-filter-item-active {
     /* @editable properties */
-    background-color: #4ACCD1;
-    border:1px solid #4ACCD1;
+    background-color: var(--nnak-blue);
+    border:1px solid var(--nnak-blue);
 }
 
 .cbp-l-filters-dropdownWrap {
-    background: #4ACCD1;
+    background: var(--nnak-blue);
 }
 .cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active {
     /* @editable properties */
-    background-color: #4ACCD1;
-    border-color: #4ACCD1;
+    background-color: var(--nnak-blue);
+    border-color: var(--nnak-blue);
 }
 .cbp-l-caption-buttonLeft,
 .cbp-l-caption-buttonRight {
     /* @editable properties */
-    background-color: #4ACCD1;
+    background-color: var(--nnak-blue);
 }
 
 .cbp-l-caption-buttonLeft:hover,

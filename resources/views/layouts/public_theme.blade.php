@@ -4,15 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="National Nurses Association of Kenya Private Instituitions Branch- Mombasa County(NNAK PIB-Mombasa County)">
+  <meta name="author" content="Martin Cornel">
+
+    {{--favicon--}}
+    <link rel="icon" href="{{ URL::to('theme/img/logo.png') }}" type="image/gif">
 
   <title>NNAK PIB-Mombasa County | @yield('title')</title>
 
   <!-- css -->
   <link href="{{URL::to('theme/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
   <link href="{{URL::to('theme/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" type="text/css" href="{{URL::to('theme/plugins/cubeportfolio/css/cubeportfolio.min.css')}}">
+  <link href="{{URL::to('theme/plugins/cubeportfolio/css/cubeportfolio.min.css')}}" rel="stylesheet" type="text/css" >
   <link href="{{URL::to('theme/css/nivo-lightbox.css')}}" rel="stylesheet" />
   <link href="{{URL::to('theme/css/nivo-lightbox-theme/default/default.css')}}" rel="stylesheet" type="text/css" />
   <link href="{{URL::to('theme/css/owl.carousel.css')}}" rel="stylesheet" media="screen" />
@@ -42,7 +45,8 @@
                     <i class="fa fa-bars"></i>
                 </button>
           <a class="navbar-brand" href="{{route('index')}}">
-                    <img src="{{ URL::to('theme/img/logo.png')}}" alt="" width="150" height="40" />
+                    {{--<img src="{{ URL::to('theme/img/logo.png')}}" alt="" width="150" height="40" />--}}
+            <span class="txt-blue txt-large">NNAK</span> <span class="txt-green txt-large">PIB</span><span class="txt-red">Mombasa County</span>
                 </a>
         </div>
           @include('parts.page_nav')

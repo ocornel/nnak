@@ -1850,10 +1850,10 @@ a.btn:focus{
 /* colors */
 
 .options_box a.t_default {
-	background:#299dcc;
+	background:var(--nnak-blue);
 }
 .options_box a.t_kissme {
-	background:#4ACCD1;
+	background:var(--nnak-blue);
 }
 .options_box a.t_lime {
 	background:#C6DF45;
@@ -1865,7 +1865,7 @@ a.btn:focus{
 
 
 .options_box a.t_red {
-	background:#eb4141;
+	background:var(--nnak-red);
 }
 
 .options_box a.t_orange {
@@ -1873,7 +1873,7 @@ a.btn:focus{
 }
 
 .options_box a.t_green {
-	background:#93c847;
+	background:var(--nnak-green);
 }
 
 .options_box a.t_sand {

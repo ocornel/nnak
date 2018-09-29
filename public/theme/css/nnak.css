@@ -37,3 +37,27 @@ footer .widget h5 {
     border-bottom: solid 6px var(--nnak-green);
     padding-bottom: 5px;
 }
+
+.txt-blue {
+    color: var(--nnak-blue);
+}
+
+.txt-green {
+    color: var(--nnak-green);
+}
+
+.txt-red {
+    color: var(--nnak-red);
+}
+
+.txt-large {
+    font-size: 5ch;
+    font-weight: bolder;
+}
+
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid var(--nnak-blue);
+    background-color: var(--nnak-blue);
+}
