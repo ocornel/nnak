@@ -55,41 +55,22 @@
       <!-- /.container -->
     </nav>
       @yield('content')
-    <footer>
+    <footer class="footer-container">
 
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-md-4">
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
-                <h5>About Medicio</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, ne nam purto nihil impetus, an facilisi accommodare sea
-                </p>
-              </div>
-            </div>
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="widget">
-                @if (Route::has('login'))
-                  <div class="top-right links">
-                    @auth
-                      <a href="{{ route('home') }}">Admin</a>
-                    @else
-                      <a href="{{ route('login') }}">Admin</a>
-                      {{--<a href="{{ route('register') }}">Register</a>--}}
-                    @endauth
-                  </div>
-                @endif
-              </div>
-              <div class="widget">
-                <h5>Information</h5>
+                <h5>Links</h5>
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Laboratory</a></li>
-                  <li><a href="#">Medical treatment</a></li>
-                  <li><a href="#">Terms & conditions</a></li>
+                  <li><a href="{{ route('about') }}">About Us</a></li>
+                  <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                  <li><a href="{{ route('events') }}">Events</a></li>
+                    <br>
+                  {{--<li><a href="#">Terms & conditions</a></li>--}}
                   @if (Route::has('login'))
-                    <li class="break-li">
+                    <li class="">
                       @auth
                         <a href="{{ route('home') }}">Admin</a>
                       @else
@@ -105,30 +86,26 @@
           <div class="col-sm-6 col-md-4">
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
-                <h5>Medicio center</h5>
-                <p>
-                  Nam leo lorem, tincidunt id risus ut, ornare tincidunt naqunc sit amet.
-                </p>
+                <h5>Get in touch</h5>
                 <ul>
-                  <li>
-                    <span class="fa-stack fa-lg">
+                  <li class="row ml-5">
+                    <span class="fa-stack fa-lg col-xs-2">
 									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
-								</span> Monday - Saturday, 8am to 10pm
+									<i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+								</span> <span class="col-xs-10">Mombasa Town <br> Bla blabla street</span>
                   </li>
-                  <li>
-                    <span class="fa-stack fa-lg">
+                  <li class="row ml-5">
+                    <span class="fa-stack fa-lg col-xs-2">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-								</span> +62 0888 904 711
+								</span> <span class="col-xs-10">+2547XXXXXXXX</span>
                   </li>
-                  <li>
-                    <span class="fa-stack fa-lg">
+                  <li class="row ml-5">
+                    <span class="fa-stack fa-lg col-xs-2">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-								</span> hello@medicio.com
+								</span> <span class="col-xs-10">nnakpbi@gmail.com</span>
                   </li>
-
                 </ul>
               </div>
             </div>
@@ -136,20 +113,17 @@
           <div class="col-sm-6 col-md-4">
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
-                <h5>Our location</h5>
-                <p>The Suithouse V303, Kuningan City, Jakarta Indonesia 12940</p>
-
+                <h5>Quote</h5>
+                <blockquote>Your life is a blessing.</blockquote>
               </div>
             </div>
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
                 <h5>Follow us</h5>
                 <ul class="company-social">
                   <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
                   <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
-                  <li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li class="social-vimeo"><a href="https://www.nnak.or.ke/"><i class="fa fa-globe"></i></a></li>
                 </ul>
               </div>
             </div>
