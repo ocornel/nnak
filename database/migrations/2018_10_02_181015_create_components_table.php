@@ -19,6 +19,7 @@ class CreateComponentsTable extends Migration
             $table->string('title');
             $table->string('content');
             $table->string('icon');
+            $table->integer('position')->default(1); // 1 Home area 2 Benefitsarea
 
             $table->timestamps();
         });

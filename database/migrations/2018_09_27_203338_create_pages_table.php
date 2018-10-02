@@ -16,10 +16,10 @@ class CreatePagesTable extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->bigInteger('visits');
+            $table->bigInteger('visits')->default(0);
             $table->unsignedInteger('created_by');
             $table->longText('content');
-            $table->string('url');
+            $table->string('url')->default(str_random(10));
 
             $table->foreign('created_by')->references('id')->on('users');
             $table->timestamps();

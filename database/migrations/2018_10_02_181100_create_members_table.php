@@ -16,10 +16,10 @@ class CreateMembersTable extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('image_url');
+            $table->string('image_url')->default('img/no_image_profile.png');
             $table->string('profession');
             $table->string('role');
-            $table->longText('profile');
+            $table->longText('profile')->nullable();
             $table->timestamps();
         });
     }
