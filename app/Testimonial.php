@@ -4,7 +4,7 @@ namespace NNAK;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Testimony extends Model
+class Testimonial extends Model
 {
     //
 }

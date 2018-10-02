@@ -15,6 +15,13 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->bigInteger('visits');
+            $table->unsignedInteger('created_by');
+            $table->longText('content');
+            $table->string('url');
+
+            $table->foreign('created_by')->references('id')->on('users');
             $table->timestamps();
         });
     }

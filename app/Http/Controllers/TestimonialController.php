@@ -2,10 +2,10 @@
 
 namespace NNAK\Http\Controllers;
 
-use NNAK\Testimony;
+use NNAK\Testimonial;
 use Illuminate\Http\Request;
 
-class TestimonyController extends Controller
+class TestimonialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class TestimonyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \NNAK\Testimony  $testimony
+     * @param  \NNAK\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function show(Testimony $testimony)
+    public function show(Testimonial $testimonial)
     {
         //
     }
@@ -52,10 +52,10 @@ class TestimonyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \NNAK\Testimony  $testimony
+     * @param  \NNAK\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function edit(Testimony $testimony)
+    public function edit(Testimonial $testimonial)
     {
         //
     }
@@ -64,10 +64,10 @@ class TestimonyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \NNAK\Testimony  $testimony
+     * @param  \NNAK\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Testimony $testimony)
+    public function update(Request $request, Testimonial $testimonial)
     {
         //
     }
@@ -75,10 +75,10 @@ class TestimonyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \NNAK\Testimony  $testimony
+     * @param  \NNAK\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Testimony $testimony)
+    public function destroy(Testimonial $testimonial)
     {
         //
     }
