@@ -18,7 +18,7 @@ class CreateImagesTable extends Migration
             $table->boolean('on_gallery');
             $table->string('image_url');
             $table->string('caption');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->unsignedInteger('event_id');
             $table->timestamps();
 
