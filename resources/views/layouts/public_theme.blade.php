@@ -34,6 +34,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 {{--National Nurses Association of Kenya Private Instituitions Branch- Mombasa County(NNAK PIB-Mombasa County)--}}
+<?php use NNAK\Page;?>
   <div id="wrapper">
 
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -67,6 +68,12 @@
                   <li><a href="{{ route('about') }}">About Us</a></li>
                   <li><a href="{{ route('contact') }}">Contact Us</a></li>
                   <li><a href="{{ route('events') }}">Events</a></li>
+                  @if(isset($links))
+                  @forelse($links as $link)
+                      <li><a href="{{ $link->url }}" title="{{$link->title}}">{{$link->name}}</a></li>
+                    @empty
+                    @endforelse
+                  @endif
                     <br>
                   {{--<li><a href="#">Terms & conditions</a></li>--}}
                   @if (Route::has('login'))
@@ -96,15 +103,20 @@
                   </li>
                   <li class="row ml-5">
                     <span class="fa-stack fa-lg col-xs-2">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-								</span> <span class="col-xs-10">+2547XXXXXXXX</span>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="col-xs-10">
+                      {{ Page::info('phone_1') }} <br>
+                      {{ Page::info('phone_2') }}
+                    </span>
                   </li>
                   <li class="row ml-5">
                     <span class="fa-stack fa-lg col-xs-2">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-								</span> <span class="col-xs-10">nnakpbi@gmail.com</span>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="col-xs-10">{{ Page::info('email') }}</span>
                   </li>
                 </ul>
               </div>

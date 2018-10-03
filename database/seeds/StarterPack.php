@@ -22,7 +22,9 @@ class StarterPack extends Seeder
             'content' => 'The website will launch soon. Here is about this event.',
         ]);
 
-        $web_launch->url = strtolower(str_replace(" ", "-", $web_launch->title))."/".$web_launch->id;
+        $web_launch->update([
+            'url' => strtolower(str_replace(" ", "-", $web_launch->title))."/p".$web_launch->id
+        ]);
 
         /*
          * EVENTS
@@ -213,11 +215,11 @@ class StarterPack extends Seeder
          */
 
         $icons = ['fa-list-alt', 'fa-hospital-o', 'fa-check', 'fa-stethoscope', 'fa-wheelchair', 'fa-plus-square', 'fa-h-square', 'fa-filter', 'fa-user-md'];
-        $i = 0;
-        while ($i < 4) {
+        $i = 1;
+        while ($i < 5) {
             Component::create([
-                'name' => 'Home Card {$i+1}',
-                'title' => 'Card {$i+1} Title',
+                'name' => "Home Card {$i}",
+                'title' => "Card {$i} Title",
                 'content' => 'Give a brief description concerning this card in this card. Preferably, yay long to fit in here.',
                 'icon' => $icons[$i],
             ]);
@@ -227,8 +229,8 @@ class StarterPack extends Seeder
         $j = 1;
         while ($i < sizeof($icons)) {
             Component::create([
-                'name' => 'Benefit Card {$j}',
-                'title' => 'Benefit {j}',
+                'name' => "Benefit Card {$j}",
+                'title' => "Benefit {$j}",
                 'content' => 'Describe this benefit briefly',
                 'icon' => $icons[$i],
                 'position' => 2

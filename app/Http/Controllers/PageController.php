@@ -2,6 +2,7 @@
 
 namespace NNAK\Http\Controllers;
 
+use NNAK\Link;
 use NNAK\Page;
 use Illuminate\Http\Request;
 
@@ -44,9 +45,9 @@ class PageController extends Controller
      * @param  \NNAK\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function show(Page $page)
+    public function show($page_title, $page_id)
     {
-        //
+        dd(Page::find($page_id));
     }
 
     /**
@@ -84,7 +85,10 @@ class PageController extends Controller
     }
 
     public function index_page() {
-            return view('index');
+        $context = [
+            'links' => Link::all(),
+        ];
+        return view('index', $context);
     }
 
     public function contact_page() {
@@ -92,7 +96,10 @@ class PageController extends Controller
     }
 
     public function about_page() {
-            return view('about');
+        $context = [
+            'links' => Link::all(),
+        ];
+            return view('about', $context);
     }
 
     public function events_page() {
