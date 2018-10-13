@@ -78,3 +78,9 @@ footer .widget h5 {
 .nnak-blue-bg {
     background: var(--nnak-blue);
 }
+
+.portal-content {
+    padding: 5vh 5vw 0;
+    /*background: #000;*/
+    /*width: 100%;*/
+}

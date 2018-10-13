@@ -27,8 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Web Info
 Route::get('/webinfo', 'WebInfoController@index')->name('webinfo');
-Route::get('/show_webinfo', 'WebInfoController@show')->name('show_webinfo');
-Route::get('/edit_webinfo', 'WebInfoController@edit')->name('edit_webinfo');
+Route::get('/show_webinfo/{webinfo_id}', 'WebInfoController@show')->name('show_webinfo');
+Route::get('/edit_webinfo/{webinfo_id}', 'WebInfoController@edit')->name('edit_webinfo');
 Route::post('/update_webinfo', 'WebInfoController@update')->name('update_webinfo');
 
 //Page
