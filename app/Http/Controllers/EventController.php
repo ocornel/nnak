@@ -14,7 +14,10 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $context = [
+            'events' => Event::all(),
+        ];
+        return view('event.index', $context);
     }
 
     /**

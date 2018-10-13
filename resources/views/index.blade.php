@@ -356,7 +356,7 @@
     <!-- /Section: services -->
 
 
-    <!-- Section: members -->
+    <!-- Section: member -->
     <section id="members" class="home-section bg-gray paddingbot-60">
         <div class="container marginbot-50">
             <div class="row">

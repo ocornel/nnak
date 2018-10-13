@@ -14,34 +14,16 @@ class WebInfoController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        $context = [
+            'webinfos' => WebInfo::all(),
+        ];
+        return view('webinfo.index', $context);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \NNAK\WebInfo  $webInfo
+     * @param  \NNAK\WebInfo $webInfo
      * @return \Illuminate\Http\Response
      */
     public function show(WebInfo $webInfo)
@@ -52,7 +34,7 @@ class WebInfoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \NNAK\WebInfo  $webInfo
+     * @param  \NNAK\WebInfo $webInfo
      * @return \Illuminate\Http\Response
      */
     public function edit(WebInfo $webInfo)
@@ -63,22 +45,11 @@ class WebInfoController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \NNAK\WebInfo  $webInfo
+     * @param  \Illuminate\Http\Request $request
+     * @param  \NNAK\WebInfo $webInfo
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, WebInfo $webInfo)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \NNAK\WebInfo  $webInfo
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(WebInfo $webInfo)
     {
         //
     }

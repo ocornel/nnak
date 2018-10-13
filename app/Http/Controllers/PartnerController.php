@@ -14,7 +14,10 @@ class PartnerController extends Controller
      */
     public function index()
     {
-        //
+        $context = [
+            'partners' => Partner::all(),
+        ];
+        return view('partner.index', $context);
     }
 
     /**

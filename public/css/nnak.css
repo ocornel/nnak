@@ -74,3 +74,7 @@ footer .widget h5 {
     background: var(--nnak-blue);
     color: #ffffff;
 }
+
+.nnak-blue-bg {
+    background: var(--nnak-blue);
+}

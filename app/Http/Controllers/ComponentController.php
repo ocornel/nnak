@@ -14,7 +14,10 @@ class ComponentController extends Controller
      */
     public function index()
     {
-        //
+        $context = [
+            'components' => Component::all(),
+        ];
+        return view('component.index', $context);
     }
 
     /**

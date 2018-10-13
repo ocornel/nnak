@@ -14,7 +14,10 @@ class SlideController extends Controller
      */
     public function index()
     {
-        //
+        $context = [
+            'slides' => Slide::all(),
+        ];
+        return view('slide.index', $context);
     }
 
     /**

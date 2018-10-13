@@ -15,7 +15,10 @@ class PageController extends Controller
      */
     public function index()
     {
-        //
+        $context = [
+            'pages' => Page::all(),
+        ];
+        return view('page.index', $context);
     }
 
     /**

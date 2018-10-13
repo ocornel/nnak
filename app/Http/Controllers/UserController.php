@@ -2,10 +2,10 @@
 
 namespace NNAK\Http\Controllers;
 
-use NNAK\Testimonial;
+use NNAK\User;
 use Illuminate\Http\Request;
 
-class TestimonialController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class TestimonialController extends Controller
     public function index()
     {
         $context = [
-            'testimonials' => Testimonial::all(),
+            'users' => User::all(),
         ];
-        return view('testimonial.index', $context);
+        return view('user.index', $context);
     }
 
     /**
@@ -44,10 +44,10 @@ class TestimonialController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \NNAK\Testimonial  $testimonial
+     * @param  \NNAK\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Testimonial $testimonial)
+    public function show(User $user)
     {
         //
     }
@@ -55,10 +55,10 @@ class TestimonialController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \NNAK\Testimonial  $testimonial
+     * @param  \NNAK\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Testimonial $testimonial)
+    public function edit(User $user)
     {
         //
     }
@@ -67,10 +67,10 @@ class TestimonialController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \NNAK\Testimonial  $testimonial
+     * @param  \NNAK\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Testimonial $testimonial)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -78,10 +78,10 @@ class TestimonialController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \NNAK\Testimonial  $testimonial
+     * @param  \NNAK\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Testimonial $testimonial)
+    public function destroy(User $user)
     {
         //
     }

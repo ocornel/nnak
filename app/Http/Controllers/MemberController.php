@@ -14,7 +14,10 @@ class MemberController extends Controller
      */
     public function index()
     {
-        //
+        $context = [
+            'members' => Member::all(),
+        ];
+        return view('member.index', $context);
     }
 
     /**

@@ -29,7 +29,7 @@
   <link id="t-colors" href="{{URL::to('theme/color/default.css')}}" rel="stylesheet">
 
   <!-- custom css -->
-  <link id="t-colors" href="{{URL::to('theme/css/nnak.css')}}" rel="stylesheet">
+  <link id="t-colors" href="{{URL::to('css/nnak.css')}}" rel="stylesheet">
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -46,8 +46,8 @@
                     <i class="fa fa-bars"></i>
                 </button>
           <a class="navbar-brand" href="{{route('index')}}">
-                    {{--<img src="{{ URL::to('theme/img/logo.png')}}" alt="" width="150" height="40" />--}}
-            <span class="txt-blue txt-large">NNAK</span> <span class="txt-green txt-large">PIB</span><span class="txt-red">Mombasa County</span>
+                    <img src="{{ URL::to('img/logo.png')}}" alt="" width="150" height="40" />
+            {{--<span class="txt-blue txt-large">NNAK</span> <span class="txt-green txt-large">PIB</span><span class="txt-red">Mombasa County</span>--}}
                 </a>
         </div>
           @include('parts.page_nav')
