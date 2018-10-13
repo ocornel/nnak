@@ -13,6 +13,10 @@ class Image extends Model
     }
 
     public function getPageUrl() {
-        return $this->getEvent()->getPage()->url;
+        return $this->getEventPage()->url;
+    }
+
+    public function getEventPage() {
+        return $this->getEvent()->getPage();
     }
 }

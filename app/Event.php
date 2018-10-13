@@ -19,4 +19,8 @@ class Event extends Model
     public function getImages() {
         return Image::where('event_id', $this->id)->get();
     }
+
+    public function getCreator() {
+        return $this->getPage()->getCreator();
+    }
 }

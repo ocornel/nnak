@@ -35,53 +35,53 @@ Route::post('/update_webinfo', 'WebInfoController@update')->name('update_webinfo
 Route::get('/page', 'PageController@index')->name('page');
 Route::get('/create_page', 'PageController@create')->name('new_page');
 Route::post('/store_page', 'PageController@store')->name('store_page');
-Route::get('/show_page', 'PageController@show')->name('show_page');
-Route::get('/edit_page', 'PageController@edit')->name('edit_page');
+Route::get('/show_page/{page_id}', 'PageController@show')->name('show_page');
+Route::get('/edit_page/{page_id}', 'PageController@edit')->name('edit_page');
 Route::post('/update_page', 'PageController@update')->name('update_page');
 
 //Image
 Route::get('/image', 'ImageController@index')->name('image');
 Route::get('/create_image', 'ImageController@create')->name('new_image');
 Route::post('/store_image', 'ImageController@store')->name('store_image');
-Route::get('/show_image', 'ImageController@show')->name('show_image');
-Route::get('/edit_image', 'ImageController@edit')->name('edit_image');
-Route::post('/update_image', 'ImageController@update')->name('update_image');
+Route::get('/show_image/{unage_id}', 'ImageController@show')->name('show_image');
+Route::get('/edit_image/{image_id}', 'ImageController@edit')->name('edit_image');
+Route::post('/update_image{image_id}', 'ImageController@update')->name('update_image');
 
 //Member
 Route::get('/member', 'MemberController@index')->name('member');
 Route::get('/create_member', 'MemberController@create')->name('new_member');
 Route::post('/store_member', 'MemberController@store')->name('store_member');
 Route::get('/show_member', 'MemberController@show')->name('show_member');
-Route::get('/edit_member', 'MemberController@edit')->name('edit_member');
+Route::get('/edit_member/{member_id}', 'MemberController@edit')->name('edit_member');
 Route::post('/update_member', 'MemberController@update')->name('update_member');
-Route::post('/destroy_member', 'MemberController@destroy')->name('destroy_member');
+Route::post('/destroy_member/{member_id}', 'MemberController@destroy')->name('destroy_member');
 
 //User
 Route::get('/user', 'UserController@index')->name('user');
 Route::get('/create_user', 'UserController@create')->name('new_user');
 Route::post('/store_user', 'UserController@store')->name('store_user');
-Route::get('/show_user', 'UserController@show')->name('show_user');
-Route::get('/edit_user', 'UserController@edit')->name('edit_user');
+Route::get('/show_user/{user_id}', 'UserController@show')->name('show_user');
+Route::get('/edit_user/{user_id}', 'UserController@edit')->name('edit_user');
 Route::post('/update_user', 'UserController@update')->name('update_user');
-Route::post('/destroy_user', 'UserController@destroy')->name('destroy_user');
+Route::post('/destroy_user/{user_id}', 'UserController@destroy')->name('destroy_user');
 
 //Testimonial
 Route::get('/testimonial', 'TestimonialController@index')->name('testimonial');
 Route::get('/create_testimonial', 'TestimonialController@create')->name('new_testimonial');
 Route::post('/store_testimonial', 'TestimonialController@store')->name('store_testimonial');
-Route::get('/show_testimonial', 'TestimonialController@show')->name('show_testimonial');
-Route::get('/edit_testimonial', 'TestimonialController@edit')->name('edit_testimonial');
+Route::get('/show_testimonial/{testimonial_id}', 'TestimonialController@show')->name('show_testimonial');
+Route::get('/edit_testimonial/{testimonial_id}', 'TestimonialController@edit')->name('edit_testimonial');
 Route::post('/update_testimonial', 'TestimonialController@update')->name('update_testimonial');
-Route::post('/destroy_testimonial', 'TestimonialController@destroy')->name('destroy_testimonial');
+Route::post('/destroy_testimonial/{testimonial_id}', 'TestimonialController@destroy')->name('destroy_testimonial');
 
 //Slide
 Route::get('/slide', 'SlideController@index')->name('slide');
 Route::get('/create_slide', 'SlideController@create')->name('new_slide');
 Route::post('/store_slide', 'SlideController@store')->name('store_slide');
-Route::get('/show_slide', 'SlideController@show')->name('show_slide');
-Route::get('/edit_slide', 'SlideController@edit')->name('edit_slide');
+Route::get('/show_slide/{slide_id}', 'SlideController@show')->name('show_slide');
+Route::get('/edit_slide/{slide_id}', 'SlideController@edit')->name('edit_slide');
 Route::post('/update_slide', 'SlideController@update')->name('update_slide');
-Route::post('/destroy_slide', 'SlideController@destroy')->name('destroy_slide');
+Route::post('/destroy_slide/{slide_id}', 'SlideController@destroy')->name('destroy_slide');
 
 //Event
 Route::get('/event', 'EventController@index')->name('event');

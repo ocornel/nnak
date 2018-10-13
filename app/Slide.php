@@ -9,6 +9,10 @@ class Slide extends Model
     protected $fillable = ['title', 'tagline', 'content', 'image_url', 'page_id'];
 
     public function getPageUrl() {
-        return Page::find($this->page_id)->url;
+        return $this->getPage()->url.'/p'.$this->page_id;
+    }
+
+    public function getPage() {
+        return Page::find($this->page_id);
     }
 }

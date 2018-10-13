@@ -84,3 +84,7 @@ footer .widget h5 {
     /*background: #000;*/
     /*width: 100%;*/
 }
+
+.ul-no-decoration {
+    list-style: none;
+}
