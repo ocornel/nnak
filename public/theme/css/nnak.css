@@ -69,3 +69,8 @@ footer .widget h5 {
 .footer-container {
     background: #111111;
 }
+
+.auth-nav {
+    background: var(--nnak-blue);
+    color: #ffffff;
+}
