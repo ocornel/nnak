@@ -23,7 +23,7 @@ class StarterPack extends Seeder
         ]);
 
         $web_launch->update([
-            'url' => strtolower(str_replace(" ", "-", $web_launch->title))."/p".$web_launch->id
+            'url' => strtolower(str_replace(" ", "-", $web_launch->title))
         ]);
 
         /*

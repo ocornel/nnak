@@ -1,7 +1,6 @@
 @extends('layouts.portal_theme')
 @section('title') Web Information @endsection
 @section('content')
-    {{--{{$webinfos[0]}}--}}
     <div class="container portal-content">
         This is a list of your website information. You can view for more details or edit to change. All changes made here will reflect on the public website.
         <div class="table-responsive table--no-card m-b-30">

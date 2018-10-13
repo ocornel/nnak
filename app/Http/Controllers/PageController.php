@@ -48,7 +48,7 @@ class PageController extends Controller
      * @param  \NNAK\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function show($page_title, $page_id)
+    public function show($page_id)
     {
         dd(Page::find($page_id));
     }
@@ -85,6 +85,10 @@ class PageController extends Controller
     public function destroy(Page $page)
     {
         //
+    }
+
+    public function visit($page_title, $page_id) {
+        dd(Page::find($page_id));
     }
 
     public function index_page() {
