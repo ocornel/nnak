@@ -29,7 +29,7 @@
                             <label for="content" class=" form-control-label">Content</label>
                         </div>
                         <div class="col-12 col-md-10">
-                            <textarea id="content"  class="form-control"  name="content" rows="10">{{isset($page) ? $page->content : ''}}</textarea>
+                            <textarea id="content"  class="form-control"  name="content" rows="10" required>{{isset($page) ? $page->content : ''}}</textarea>
                             <small class="form-text text-muted">This is the content of the page.</small>
                         </div>
                     </div>

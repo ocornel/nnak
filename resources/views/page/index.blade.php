@@ -23,7 +23,7 @@
                         <td>{{$page->created_at}}</td>
                         <td>{{$page->updated_at}}</td>
                         <td>
-                            <a href="{{route('visit_page',[$page->url,$page->id] )}}"><i class="fa fa-globe"></i> Visit</a> &nbsp;
+                            <a href="{{route('visit_page',[$page->url,$page->id] )}}" target="_blank"><i class="fa fa-globe"></i> Visit</a> &nbsp;
                             <a href="{{route('edit_page', $page->id)}}"><i class="fa fa-edit"></i> Edit</a>
                         </td>
                     </tr>

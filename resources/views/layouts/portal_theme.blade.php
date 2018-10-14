@@ -6,8 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
+    <meta name="author" content="Martin Cornel">
+    <meta name="keywords" content="quickwapps Martin Cornel NNAK Mombasa County">
+
+    {{--favicon--}}
+    <link rel="icon" href="{{ URL::to('theme/img/logo.png') }}" type="image/gif">
 
     <!-- Title Page-->
     <title>@yield('title') | {{NNAK\Page::info('title')}} </title>

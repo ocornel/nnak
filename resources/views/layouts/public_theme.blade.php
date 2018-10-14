@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="National Nurses Association of Kenya Private Instituitions Branch- Mombasa County(NNAK PIB-Mombasa County)">
-  <meta name="author" content="Martin Cornel">
+    <meta name="keywords" content="quickwapps Martin Cornel NNAK Mombasa County">
+    <meta name="author" content="Martin Cornel">
 
     {{--favicon--}}
     <link rel="icon" href="{{ URL::to('theme/img/logo.png') }}" type="image/gif">
@@ -48,7 +49,8 @@
           <a class="navbar-brand" href="{{route('index')}}">
                     <img src="{{ URL::to('img/logo.png')}}" alt="" width="150" height="40" />
             {{--<span class="txt-blue txt-large">NNAK</span> <span class="txt-green txt-large">PIB</span><span class="txt-red">Mombasa County</span>--}}
-                </a>
+
+          </a>
         </div>
           @include('parts.page_nav')
         <!-- /.navbar-collapse -->

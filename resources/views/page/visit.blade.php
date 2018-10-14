@@ -2,8 +2,16 @@
 
 @section('title')
     {{$page->title}}
+
 @endsection
-@section('page_nav') <span class="page-title">{{$page->title}}</span> @endsection
+
+@section('page_nav')
+    <span class="page-title">{{$page->title}}</span>
+    @if(Auth::user() != null)
+        <span ><a href="{{route('edit_page', $page->id)}}" class="btn btn-primary">Edit Page</a></span>
+    @endif
+@endsection
+
 @section('content')
     <div class="container page-content">
         <div class="row">

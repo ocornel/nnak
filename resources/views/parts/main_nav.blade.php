@@ -5,6 +5,9 @@
             <a class="{{url()->current() == route('about') ? "active": ""}}"  href="{{route('about')}}">About Us</a>
             <a class="{{url()->current() == route('events') ? "active": ""}}"  href="{{route('events')}}">Our Events</a>
             <a class="{{url()->current() == route('contact') ? "active": ""}}"  href="{{route('contact')}}">Contact Us</a>
+            @if(Auth::user() != null)
+                <a href="{{route('home')}}">Back to Portal</a>
+            @endif
         </nav>
     </div>
 </div>

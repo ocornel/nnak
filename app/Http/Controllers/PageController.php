@@ -32,7 +32,7 @@ class PageController extends Controller
             'title' => $new_page->title,
             'url' => $new_page->url.'/p'.$new_page->id
         ]);
-        return redirect(route('show_page', $new_page->id))->with('success', "Page created successfully");
+        return redirect(route('visit_page', ['PREVIEW '.$new_page->title, $new_page->id]))->with('success', "Page created successfully");
     }
 
     public function show($page_id)
@@ -52,7 +52,7 @@ class PageController extends Controller
     {
         $page = Page::find($page_id);
         $page->update($request->all());
-        return redirect(route('show_page', $page_id))->with('success', "Page updated successfully");
+        return redirect(route('visit_page', ['PREVIEW '.$page->title, $page->id]))->with('success', "Page updated successfully");
     }
 
     public function destroy(Page $page)

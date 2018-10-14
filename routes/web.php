@@ -102,6 +102,6 @@ Route::post('/destroy_partner', 'PartnerController@destroy')->name('destroy_part
 
 //Component
 Route::get('/component', 'ComponentController@index')->name('component');
-Route::get('/show_component', 'ComponentController@show')->name('show_component');
-Route::get('/edit_component', 'ComponentController@edit')->name('edit_component');
-Route::post('/update_component', 'ComponentController@update')->name('update_component');
+Route::get('/show_component/{component_id}', 'ComponentController@show')->name('show_component');
+Route::get('/edit_component/{component_id}', 'ComponentController@edit')->name('edit_component');
+Route::post('/update_component/{component_id}', 'ComponentController@update')->name('update_component');
