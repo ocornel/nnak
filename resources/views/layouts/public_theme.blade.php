@@ -68,12 +68,6 @@
                   <li><a href="{{ route('about') }}">About Us</a></li>
                   <li><a href="{{ route('contact') }}">Contact Us</a></li>
                   <li><a href="{{ route('events') }}">Events</a></li>
-                  @if(isset($links))
-                  @forelse($links as $link)
-                      <li><a href="{{ $link->url }}" title="{{$link->title}}">{{$link->name}}</a></li>
-                    @empty
-                    @endforelse
-                  @endif
                     <br>
                   {{--<li><a href="#">Terms & conditions</a></li>--}}
                   @if (Route::has('login'))
@@ -130,7 +124,7 @@
               </div>
             </div>
               <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="widget">
+              <div class="widg et">
                 <h5>Follow us</h5>
                 <ul class="company-social">
                   <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>

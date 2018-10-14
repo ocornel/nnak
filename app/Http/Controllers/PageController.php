@@ -61,7 +61,11 @@ class PageController extends Controller
     }
 
     public function visit($page_title, $page_id) {
-        dd(Page::find($page_id));
+        $context = [
+            'links' => Link::all(),
+            'page' => Page::find($page_id)
+        ];
+        return view('page.visit', $context);
     }
 
     public function index_page() {
