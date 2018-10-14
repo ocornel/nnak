@@ -21,25 +21,17 @@ class WebInfoController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \NNAK\WebInfo $webInfo
-     * @return \Illuminate\Http\Response
-     */
-    public function show(WebInfo $webInfo)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \NNAK\WebInfo $webInfo
      * @return \Illuminate\Http\Response
      */
-    public function edit(WebInfo $webInfo)
+    public function edit($webinfo_id)
     {
-        //
+        $context = [
+            'webinfo' => WebInfo::find($webinfo_id),
+        ];
+        return view('webinfo.edit', $context);
     }
 
     /**
@@ -49,8 +41,10 @@ class WebInfoController extends Controller
      * @param  \NNAK\WebInfo $webInfo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WebInfo $webInfo)
+    public function update(Request $request, $webinfo_id)
     {
-        //
+        $webInfo = WebInfo::find($webinfo_id);
+        $webInfo->update($request->all());
+        return redirect(route('webinfo', ['success'=> "Website {$webInfo->name} updated successfully"]));
     }
 }

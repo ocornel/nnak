@@ -88,3 +88,12 @@ footer .widget h5 {
 .ul-no-decoration {
     list-style: none;
 }
+
+.edit-form {
+    width: 70%;
+    margin: auto;
+}
+
+.edit-form label {
+    font-weight: bold;
+}

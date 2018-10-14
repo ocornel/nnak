@@ -22,7 +22,6 @@
                         <td>{{$webinfo->created_at}}</td>
                         <td>{{$webinfo->updated_at}}</td>
                         <td>
-                            <a href="{{route('show_webinfo', $webinfo->id)}}"><i class="fa fa-info-circle"></i> View</a> &nbsp;
                             <a href="{{route('edit_webinfo', $webinfo->id)}}"><i class="fa fa-edit"></i> Edit</a>
                         </td>
                     </tr>

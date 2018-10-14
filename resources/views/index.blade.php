@@ -1,6 +1,5 @@
 @extends('layouts.public_theme')
 
-
 @section('page_nav')
     <li class="active"><a href="#intro">Home</a></li>
     <li><a href="#benefits">Benefits</a></li>

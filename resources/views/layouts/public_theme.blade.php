@@ -10,7 +10,7 @@
     {{--favicon--}}
     <link rel="icon" href="{{ URL::to('theme/img/logo.png') }}" type="image/gif">
 
-  <title>NNAK PIB-Mombasa County | @yield('title')</title>
+  <title>{{NNAK\Page::info('title')}} | @yield('title')</title>
 
   <!-- css -->
   <link href="{{URL::to('theme/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
@@ -148,7 +148,7 @@
             <div class="col-sm-6 col-md-6 col-lg-6">
               <div class="wow fadeInLeft" data-wow-delay="0.1s">
                 <div class="text-left">
-                  <p>&copy;Copyright {{ date("Y") }}- NNAK Mombasa. All rights reserved.</p>
+                  <p>&copy;Copyright {{ date("Y") }} {{Page::info('title')}}. All rights reserved.</p>
                 </div>
               </div>
             </div>
@@ -156,6 +156,7 @@
               <div class="wow fadeInRight" data-wow-delay="0.1s">
                 <div class="text-right">
                   <div class="credits">
+
                     Built by <a href="https://profile.quickwapps.com/">Cornel</a>
                   </div>
                 </div>

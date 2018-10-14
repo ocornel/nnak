@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>@yield('title') | NNAK PIB-Mombasa County</title>
+    <title>@yield('title') | {{NNAK\Page::info('title')}} </title>
 
     <!-- Fontfaces CSS-->
     <link href="{{URL::to('admin_theme/css/font-face.css')}}" rel="stylesheet" media="all">
@@ -262,6 +262,14 @@
 
     <!-- PAGE CONTENT-->
     <div class="page-content--bgf7">
+        <div class="portal-content">
+            @if(isset($success))
+                <div class="text-success">{{$success}}</div>
+            @endif
+            @if(isset($error))
+                <div class="text-danger">{{$error}}</div>
+            @endif
+        </div>
         @yield('content')
 
         <!-- COPYRIGHT-->
@@ -270,7 +278,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © 2018 NNAK Mombasa County. Need help <a href="mailto:mrtncornel@gmail.com">Mail Martin</a> or visit
+                                <p>Copyright © 2018 {{NNAK\Page::info('title')}} . Need help <a href="mailto:mrtncornel@gmail.com">Mail Martin</a> or visit
                                     <a href="http://quickwapps.com"> Support Site</a>.</p>
                             </div>
                         </div>

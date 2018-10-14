@@ -27,9 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Web Info
 Route::get('/webinfo', 'WebInfoController@index')->name('webinfo');
-Route::get('/show_webinfo/{webinfo_id}', 'WebInfoController@show')->name('show_webinfo');
 Route::get('/edit_webinfo/{webinfo_id}', 'WebInfoController@edit')->name('edit_webinfo');
-Route::post('/update_webinfo', 'WebInfoController@update')->name('update_webinfo');
+Route::post('/update_webinfo/{webinfo_id}', 'WebInfoController@update')->name('update_webinfo');
 
 //Page
 Route::get('/page', 'PageController@index')->name('page');
@@ -43,7 +42,7 @@ Route::post('/update_page', 'PageController@update')->name('update_page');
 Route::get('/image', 'ImageController@index')->name('image');
 Route::get('/create_image', 'ImageController@create')->name('new_image');
 Route::post('/store_image', 'ImageController@store')->name('store_image');
-Route::get('/show_image/{unage_id}', 'ImageController@show')->name('show_image');
+Route::get('/show_image/{image_id}', 'ImageController@show')->name('show_image');
 Route::get('/edit_image/{image_id}', 'ImageController@edit')->name('edit_image');
 Route::post('/update_image{image_id}', 'ImageController@update')->name('update_image');
 
