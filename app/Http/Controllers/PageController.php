@@ -5,14 +5,10 @@ namespace NNAK\Http\Controllers;
 use NNAK\Link;
 use NNAK\Page;
 use Illuminate\Http\Request;
+use Auth;
 
 class PageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $context = [
@@ -21,67 +17,44 @@ class PageController extends Controller
         return view('page.index', $context);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('page.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $request['url'] = strtolower(str_replace(" ", "-", $request->title));
+        $request['created_by'] = Auth::user()->id;
+        $new_page = Page::create($request->all());
+        Link::create([
+            'name' => "Page: ".$new_page->title,
+            'title' => $new_page->title,
+            'url' => $new_page->url.'/p'.$new_page->id
+        ]);
+        return redirect(route('show_page', $new_page->id))->with('success', "Page created successfully");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \NNAK\Page  $page
-     * @return \Illuminate\Http\Response
-     */
     public function show($page_id)
     {
         dd(Page::find($page_id));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \NNAK\Page  $page
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Page $page)
+    public function edit($page_id)
     {
-        //
+        $context = [
+            'page' => Page::find($page_id)
+        ];
+        return view('page.create', $context);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \NNAK\Page  $page
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Page $page)
+    public function update(Request $request, $page_id)
     {
-        //
+        $page = Page::find($page_id);
+        $page->update($request->all());
+        return redirect(route('show_page', $page_id))->with('success', "Page updated successfully");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \NNAK\Page  $page
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Page $page)
     {
         //

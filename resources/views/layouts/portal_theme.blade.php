@@ -29,6 +29,7 @@
     <link href="{{URL::to('admin_theme/vendor/slick/slick.css')}}" rel="stylesheet" media="all">
     <link href="{{URL::to('admin_theme/vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
     <link href="{{URL::to('admin_theme/vendor/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet" media="all">
+    <link href="{{URL::to('/js/summernote/summernote.css')}}" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
     <link href="{{URL::to('admin_theme/css/theme.css')}}" rel="stylesheet" media="all">
@@ -262,14 +263,7 @@
 
     <!-- PAGE CONTENT-->
     <div class="page-content--bgf7">
-        <div class="portal-content">
-            @if(isset($success))
-                <div class="text-success">{{$success}}</div>
-            @endif
-            @if(isset($error))
-                <div class="text-danger">{{$error}}</div>
-            @endif
-        </div>
+        {{--TODO put success or error message after actions--}}
         @yield('content')
 
         <!-- COPYRIGHT-->
@@ -308,12 +302,12 @@
 <script src="{{URL::to('admin_theme/vendor/circle-progress/circle-progress.min.js')}}"></script>
 <script src="{{URL::to('admin_theme/vendor/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
 <script src="{{URL::to('admin_theme/vendor/chartjs/Chart.bundle.min.js')}}"></script>
-<script src="{{URL::to('admin_theme/vendor/select2/select2.min.js')}}">
-</script>
+<script src="{{URL::to('admin_theme/vendor/select2/select2.min.js')}}"> </script>
+<script src="{{ URL::to('js/summernote/summernote.js')}}"></script>
 
 <!-- Main JS-->
 <script src="{{URL::to('admin_theme/js/main.js')}}"></script>
-
+@yield('scripts')
 </body>
 
 </html>

@@ -97,3 +97,30 @@ footer .widget h5 {
 .edit-form label {
     font-weight: bold;
 }
+
+.popover {
+    display: none;
+}
+
+.note-btn-group button {
+    border-radius: 3px;
+    padding: 5px;
+    border: .8px solid #aaaaaa;
+    font-weight: unset;
+    background-color: white;
+    color: #000000;
+}
+
+.note-editor.note-frame.fullscreen {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 5;
+    width: 100%!important;
+}
+
+.panel-heading.note-toolbar {
+    padding: 0 0 5px 5px;
+    margin: 0;
+    background: #d1d1d1;
+}

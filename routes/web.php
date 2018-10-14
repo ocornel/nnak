@@ -36,7 +36,7 @@ Route::get('/create_page', 'PageController@create')->name('new_page');
 Route::post('/store_page', 'PageController@store')->name('store_page');
 Route::get('/show_page/{page_id}', 'PageController@show')->name('show_page');
 Route::get('/edit_page/{page_id}', 'PageController@edit')->name('edit_page');
-Route::post('/update_page', 'PageController@update')->name('update_page');
+Route::post('/update_page/{page_id}', 'PageController@update')->name('update_page');
 
 //Image
 Route::get('/image', 'ImageController@index')->name('image');

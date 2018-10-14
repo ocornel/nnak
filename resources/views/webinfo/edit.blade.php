@@ -18,8 +18,8 @@
                                 <label for="content" class=" form-control-label">Content</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="text" id="content" name="content" placeholder="Website Title" class="form-control" required value="{{$webinfo->content}}">
-                                <small class="form-text text-muted">This is the title of the website.</small>
+                                <input type="text" id="content" name="content" placeholder="Type here" class="form-control" required value="{{$webinfo->content}}">
+                                <small class="form-text text-muted">This is the {{$webinfo->name}} on the website.</small>
                             </div>
                         </div>
 

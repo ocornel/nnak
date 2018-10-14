@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Page extends Model
 {
-    protected $fillable = ['title', 'content', 'url'];
+    protected $fillable = ['title', 'content', 'url', 'created_by'];
 
     public function getCreator() {
         return User::find($this->created_by);
