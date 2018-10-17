@@ -2,6 +2,7 @@
 
 namespace NNAK\Http\Controllers;
 
+use NNAK\Component;
 use NNAK\Link;
 use NNAK\Page;
 use Illuminate\Http\Request;
@@ -71,6 +72,8 @@ class PageController extends Controller
     public function index_page() {
         $context = [
             'links' => Link::all(),
+            'home_components' => Component::where('name', 'LIKE','Home%')->get(),
+            'benefit_components' => Component::where('name', 'LIKE','Benefit%')->get(),
         ];
         return view('index', $context);
     }

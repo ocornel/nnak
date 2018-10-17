@@ -4,16 +4,16 @@
 @section('page_nav')
     <li class="active"><a href="#contact">Contacts</a></li>
     <li><a href="#form">Form</a></li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle red" data-toggle="dropdown">
+    {{--<li class="dropdown">--}}
+        {{--<a href="#" class="dropdown-toggle red" data-toggle="dropdown">--}}
             {{--<span class="badge custom-badge red pull-right">Extra</span>--}}
-            <span class="red badge custom-badge">Admin Only<b class="caret"></b></span></a>
-        <ul class="dropdown-menu">
-            <li><a href="#">Edit Content</a></li>
+            {{--<span class="red badge custom-badge">Admin Only<b class="caret"></b></span></a>--}}
+        {{--<ul class="dropdown-menu">--}}
+            {{--<li><a href="#">Edit Content</a></li>--}}
             {{--<li><a href="../../../public/theme/index-form.html">Home Form</a></li>--}}
             {{--<li><a href="../../../public/theme/index-video.html">Home video</a></li>--}}
-        </ul>
-    </li>
+        {{--</ul>--}}
+    {{--</li>--}}
 @endsection
 
 @section('title')

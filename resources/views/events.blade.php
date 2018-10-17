@@ -4,13 +4,13 @@
 @section('page_nav')
     <li class="active"><a href="#events">Past Events</a></li>
     <li class="active"><a href="#events">Future Events</a></li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle red" data-toggle="dropdown">
-            <span class="red badge custom-badge">Admin Only<b class="caret"></b></span></a>
-        <ul class="dropdown-menu">
-            <li><a href="#">Edit Content</a></li>
-        </ul>
-    </li>
+    {{--<li class="dropdown">--}}
+        {{--<a href="#" class="dropdown-toggle red" data-toggle="dropdown">--}}
+            {{--<span class="red badge custom-badge">Admin Only<b class="caret"></b></span></a>--}}
+        {{--<ul class="dropdown-menu">--}}
+            {{--<li><a href="#">Edit Content</a></li>--}}
+        {{--</ul>--}}
+    {{--</li>--}}
 @endsection
 
 @section('title')

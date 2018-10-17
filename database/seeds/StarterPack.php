@@ -135,7 +135,7 @@ class StarterPack extends Seeder
         Link::create([
             'name' => 'Launch Event',
             'title' => $launch_event->getPage()->title,
-            'url' => $launch_event->getPage()->url,
+            'url' => $launch_event->getPage()->url."/p{$launch_event->getPage()->id}",
         ]);
 
         /*

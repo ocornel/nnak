@@ -14,24 +14,23 @@
 
 @section('content')
     <div class="container page-content">
-        <div class="row">
-            <div class="col-md-9">
+        <div class="">
+            <div class="">
             {!! $page->content !!}
             </div>
-            <div class="col-md-3 page-widget">
-                <div class="widget">
-                    <h5>More Pages</h5>
-                    <ul class="">
-                        @if(isset($links))
-                            @forelse($links as $link)
-                                <li><a href="{{ '../'.$link->url }}" title="{{$link->title}}">{{$link->name}}</a></li>
-                            @empty
-                            @endforelse
-                        @endif
-                    </ul>
-                </div>
 
-            </div>
         </div>
+        <div class="page-widget">
+            <h5>More Pages</h5>
+            <ul class="">
+                @if(isset($links))
+                    @forelse($links as $link)
+                        <li><a href="{{ '../'.$link->url }}" title="{{$link->title}}">{{$link->name}}</a></li>
+                    @empty
+                    @endforelse
+                @endif
+            </ul>
+        </div>
+
     </div>
 @endsection

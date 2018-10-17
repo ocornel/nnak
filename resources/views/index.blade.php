@@ -6,13 +6,13 @@
     <li><a href="#members">Members</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#testimonial">Testimonials</a></li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle red" data-toggle="dropdown">
-            <span class="red badge custom-badge">Admin Only<b class="caret"></b></span></a>
-        <ul class="dropdown-menu">
-            <li><a href="#">Edit Content</a></li>
-        </ul>
-    </li>
+    {{--<li class="dropdown">--}}
+        {{--<a href="#" class="dropdown-toggle red" data-toggle="dropdown">--}}
+            {{--<span class="red badge custom-badge">Admin Only<b class="caret"></b></span></a>--}}
+        {{--<ul class="dropdown-menu">--}}
+            {{--<li><a href="#">Edit Content</a></li>--}}
+        {{--</ul>--}}
+    {{--</li>--}}
 @endsection
 
 @section('title')
@@ -169,55 +169,20 @@
 
             </div>
             <div class="row">
-
-
-                <div class="col-sm-3 col-md-3">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="box text-center">
-                            <i class="fa fa-list-alt fa-3x circled bg-skin"></i>
-
-                            <h4 class="h-bold">Membership</h4>
-                            <p>
-                                Give a brief description concerning membership in this association. Preferably, yay long to fit in here.
-                            </p>
+                @forelse($home_components as $component)
+                    <div class="col-sm-3 col-md-3">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="box text-center">
+                                <i class="fa {{$component->icon}} fa-3x circled bg-skin"></i>
+                                <h4 class="h-bold">{{$component->title}}</h4>
+                                <p>
+                                    {{$component->content}}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="box text-center">
-                            <i class="fa fa-hospital-o fa-3x circled bg-skin"></i>
-
-                            <h4 class="h-bold">Participation</h4>
-                            <p>
-                                Give a brief description concerning participation in this association. Preferably, yay long to fit in here.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="box text-center">
-                            <i class="fa fa-check fa-3x circled bg-skin"></i>
-
-                            <h4 class="h-bold">Benefits</h4>
-                            <p>
-                                Note: These could have their titles and description changed by the admin. So they don't have to be these.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="box text-center">
-                            <i class="fa fa-user-md fa-3x circled bg-skin"></i>
-                            <h4 class="h-bold">Works and Research</h4>
-                            <p>
-                                Try as much as possible to have the lengths of the descriptions equalling so as to balance the heights.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @empty
+                @endforelse
             </div>
         </div>
 
@@ -271,83 +236,30 @@
                         <img src="{{ URL::to('theme/img/dummy/img-1.jpg')}}" class="img-responsive" alt="" />
                     </div>
                 </div>
-                <div class="col-sm-3 col-md-3">
-
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <span class="fa fa-stethoscope fa-3x"></span>
-                            </div>
-                            <div class="service-desc">
-                                <h5 class="h-light">Benefit 1</h5>
-                                <p>Brief description of this benefit for members.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <span class="fa fa-wheelchair fa-3x"></span>
-                            </div>
-                            <div class="service-desc">
-                                <h5 class="h-light">Benefit 2</h5>
-                                <p>You could share the list and description for coding.</p>
+                <div class="col-sm-6 col-md-6">
+                    <div class="row">
+                        @forelse($benefit_components as $component)
+                        <div class="wow fadeInRight col-sm-6 col-md-6" data-wow-delay="0.1s">
+                            <div class="service-box">
+                                <div class="service-icon">
+                                    <span class="fa {{$component->icon}} fa-3x"></span>
+                                </div>
+                                <div class="service-desc">
+                                    <h5 class="h-light">{{$component->title}}</h5>
+                                    <p>{{$component->content}}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <span class="fa fa-plus-square fa-3x"></span>
-                            </div>
-                            <div class="service-desc">
-                                <h5 class="h-light">Benefit 3</h5>
-                                <p>You can also use this section for other stuff that...</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="col-sm-3 col-md-3">
-
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <span class="fa fa-h-square fa-3x"></span>
-                            </div>
-                            <div class="service-desc">
-                                <h5 class="h-light">Benefit 4</h5>
-                                <p>...could be arranged in this format. Share for coding.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <span class="fa fa-filter fa-3x"></span>
-                            </div>
-                            <div class="service-desc">
-                                <h5 class="h-light">Benefit 5</h5>
-                                <p>They don't have to be this many. Just list even count</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                <span class="fa fa-user-md fa-3x"></span>
-                            </div>
-                            <div class="service-desc">
-                                <h5 class="h-light">Benefit 6</h5>
-                                <p>Though 6 works best for this space as you can see.....</p>
-                            </div>
-                        </div>
+                        @empty
+                        @endforelse
                     </div>
 
                 </div>
+                {{--<div class="col-sm-3 col-md-3">--}}
+
+                    {{----}}
+
+                {{--</div>--}}
 
             </div>
         </div>
