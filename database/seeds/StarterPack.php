@@ -214,7 +214,7 @@ class StarterPack extends Seeder
          * COMPONENTS
          */
 
-        $icons = ['fa-list-alt', 'fa-hospital-o', 'fa-check', 'fa-stethoscope', 'fa-wheelchair', 'fa-plus-square', 'fa-h-square', 'fa-filter', 'fa-user-md'];
+        $icons = Component::ICONS;
         $i = 1;
         while ($i < 5) {
             Component::create([
@@ -227,7 +227,7 @@ class StarterPack extends Seeder
         }
 
         $j = 1;
-        while ($i < sizeof($icons)) {
+        while ($i < 11) {
             Component::create([
                 'name' => "Benefit Card {$j}",
                 'title' => "Benefit {$j}",

@@ -27,7 +27,7 @@ class ComponentController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

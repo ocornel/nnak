@@ -253,19 +253,11 @@
                         @empty
                         @endforelse
                     </div>
-
                 </div>
-                {{--<div class="col-sm-3 col-md-3">--}}
-
-                    {{----}}
-
-                {{--</div>--}}
-
             </div>
         </div>
     </section>
     <!-- /Section: services -->
-
 
     <!-- Section: member -->
     <section id="members" class="home-section bg-gray paddingbot-60">
