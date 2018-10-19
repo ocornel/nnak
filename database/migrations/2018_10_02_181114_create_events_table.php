@@ -16,10 +16,9 @@ class CreateEventsTable extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
-            $table->string('intro');
+            $table->longText('intro');
             $table->unsignedInteger('page_id');
             $table->timestamps();
-
             $table->foreign('page_id')->references('id')->on('pages');
         });
     }

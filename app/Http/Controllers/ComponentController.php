@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 
 class ComponentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $context = [
@@ -20,67 +15,34 @@ class ComponentController extends Controller
         return view('component.index', $context);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
 
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \NNAK\Component  $component
-     * @return \Illuminate\Http\Response
-     */
     public function show(Component $component)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \NNAK\Component  $component
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Component $component)
+    public function edit($component_id)
     {
-        //
+        $context = [
+            'component' => Component::find($component_id),
+        ];
+        return view('component.edit', $context);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \NNAK\Component  $component
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Component $component)
+    public function update(Request $request, $component_id)
     {
-        //
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \NNAK\Component  $component
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Component $component)
     {
         //

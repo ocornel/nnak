@@ -10,6 +10,9 @@
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="col-md"><b>Info Created on: </b>{{$webinfo->created_at}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
                         <div class="col-md"><b>Info Last Updated: </b>{{$webinfo->updated_at}}</div>
                     </div>
                     <br>
