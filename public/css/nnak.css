@@ -167,3 +167,33 @@ footer .widget h5 {
 .full-width {
     width: 100%;
 }
+
+.align-middle {
+    height: 100vh;
+    /*align-items: center;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lost {
+    background-size: cover;
+    background: #0D0D0D url("../img/lost_bg.jpg") no-repeat bottom;
+    /*height: 100vh;*/
+}
+
+.lost-message {
+    margin-top: 15vh;
+    text-align: center;
+    padding: 2vh;
+    border-radius: 1vh;
+    background: #ffffff;
+    width: 70vw;
+    opacity: .3;
+    height: 20vh;
+}
+
+.lost-message:hover {
+    opacity: .4;
+    background: var(--nnak-green);
+}

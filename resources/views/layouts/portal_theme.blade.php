@@ -42,6 +42,14 @@
 
 <body class="animsition">
 <div class="page-wrapper">
+    @if(Auth::user() == null)
+        <div class="align-middle lost" align="center">
+            <a href="{{route('login')}}" class="lost-message">
+                <h1>You seem to have lost your way. <br>To proceed, Click this baloon to login</h1> <br>
+            </a>
+
+        </div>
+    @else
     <!-- HEADER DESKTOP-->
     <header class="header-desktop3 d-none d-lg-block nnak-blue-bg">
         <div class="section__content section__content--p35">
@@ -141,8 +149,15 @@
                                     </div>
                                 </div>
                                 <div class="account-dropdown__footer">
-                                    <a href="#">
+                                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                                         <i class="zmdi zmdi-power"></i>Logout</a>
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -284,7 +299,7 @@
             </section>
             <!-- END COPYRIGHT-->
     </div>
-
+@endif
 </div>
 
 <!-- Jquery JS-->
