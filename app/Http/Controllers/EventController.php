@@ -4,6 +4,9 @@ namespace NNAK\Http\Controllers;
 
 use NNAK\Event;
 use Illuminate\Http\Request;
+use NNAK\Link;
+use NNAK\Page;
+use Auth;
 
 class EventController extends Controller
 {
@@ -20,67 +23,55 @@ class EventController extends Controller
         return view('event.index', $context);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('event.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $request['url'] = strtolower(str_replace(" ", "-", $request->title));
+        $request['created_by'] = Auth::user()->id;
+        $new_page = Page::create($request->all());
+        Link::create([
+            'name' => "Page: ".$new_page->title,
+            'title' => $new_page->title,
+            'url' => $new_page->url.'/p'.$new_page->id
+        ]);
+
+        Event::create([
+            'date' => $request->date,
+            'intro' => $request->intro,
+            'page_id' =>$new_page->id,
+        ]);
+
+        return redirect(route('visit_page', ['PREVIEW '.$new_page->title, $new_page->id]))->with('success', "Page created successfully");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \NNAK\Event  $event
-     * @return \Illuminate\Http\Response
-     */
     public function show(Event $event)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \NNAK\Event  $event
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Event $event)
+    public function edit($event_id)
     {
-        //
+        $event = Event::find($event_id);
+        $context = [
+            'event' => $event,
+            'page' =>$event->getPage(),
+        ];
+        return view('event.create', $context);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \NNAK\Event  $event
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Event $event)
+    public function update(Request $request, $event_id)
     {
-        //
+        $event = Event::find($event_id);
+        $page = $event->getPage();
+        $page->update($request->all());
+        $event->update($request->all());
+        return redirect(route('visit_page', ['PREVIEW '.$page->title, $page->id]))->with('success', "Page updated successfully");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \NNAK\Event  $event
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Event $event)
     {
         //

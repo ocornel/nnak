@@ -2,7 +2,9 @@
 
 namespace NNAK\Http\Controllers;
 
+use Carbon\Carbon;
 use NNAK\Component;
+use NNAK\Event;
 use NNAK\Link;
 use NNAK\Page;
 use Illuminate\Http\Request;
@@ -43,10 +45,16 @@ class PageController extends Controller
 
     public function edit($page_id)
     {
-        $context = [
-            'page' => Page::find($page_id)
-        ];
-        return view('page.create', $context);
+        $page = Page::find($page_id);
+        if ($page->getEvent() == null) {
+            $context = [
+                'page' => Page::find($page_id)
+            ];
+            return view('page.create', $context);
+        } else {
+            $event_id = $page->getEvent()->id;
+            return redirect(route('edit_event', $event_id));
+        }
     }
 
     public function update(Request $request, $page_id)
@@ -90,6 +98,10 @@ class PageController extends Controller
     }
 
     public function events_page() {
-            return view('events');
+        $context = [
+            'past_events' => Event::where('date', "<", Carbon::today())->get(),
+            'future_events' => Event::where('date', ">=", Carbon::today())->get(),
+        ];
+        return view('events', $context);
     }
 }

@@ -86,10 +86,10 @@ Route::post('/destroy_slide/{slide_id}', 'SlideController@destroy')->name('destr
 Route::get('/event', 'EventController@index')->name('event');
 Route::get('/create_event', 'EventController@create')->name('new_event');
 Route::post('/store_event', 'EventController@store')->name('store_event');
-Route::get('/show_event', 'EventController@show')->name('show_event');
-Route::get('/edit_event', 'EventController@edit')->name('edit_event');
-Route::post('/update_event', 'EventController@update')->name('update_event');
-Route::post('/destroy_event', 'EventController@destroy')->name('destroy_event');
+Route::get('/show_event/{event_id}', 'EventController@show')->name('show_event');
+Route::get('/edit_event/{event_id}', 'EventController@edit')->name('edit_event');
+Route::post('/update_event/{event_id}', 'EventController@update')->name('update_event');
+Route::post('/destroy_event/{event_id}', 'EventController@destroy')->name('destroy_event');
 
 //Partner
 Route::get('/partner', 'PartnerController@index')->name('partner');

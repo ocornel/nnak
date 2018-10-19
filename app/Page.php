@@ -27,4 +27,8 @@ class Page extends Model
             return null;
         }
     }
+
+    public function getEvent() {
+        return Event::where('page_id', $this->id)->first();
+    }
 }

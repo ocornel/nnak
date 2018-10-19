@@ -34,113 +34,34 @@
             </div>
         </div>
         <div class="container ">
-
             <div class="row">
                 {{--<div class="col-sm-6 col-md-6">--}}
                     {{--<div class="wow fadeInUp" data-wow-delay="0.2s">--}}
                         {{--<img src="{{ URL::to('theme/img/dummy/img-1.jpg')}}" class="img-responsive" alt="" />--}}
                     {{--</div>--}}
                 {{--</div>--}}
-                <div class="col-sm-6 col-md-6">
+                @forelse($past_events as $event)
+                    <div class="col-sm-6 col-md-6">
 
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                24.07 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
+                        <div class="wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="service-box row ml-5">
+                                <div class="service-icon col-sm-1" align="center">
+                                    <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
+                                    {{\Carbon\Carbon::parse($event->date)->format('d.m')}}<br>{{\Carbon\Carbon::parse($event->date)->format('Y')}}
+                                </div>
+                                <div class="service-desc col-sm-10">
+                                    <h5 class="h-light"><a href="#" title="Click to read about event">{{$event->title}}</a></h5>
+                                    <p>{{$event->intro}}<br><a href="{{route('visit_page', [$event->getPage()->url, $event->getPage()->id])}}" class="btn btn-primary">Read More ></a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
+                @empty No past events yet
+                @endforelse
 
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                24.07 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                24.07 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                24.07 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                24.07 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                24.07 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div><h5>More Past events:</h5></div>
             <div>Here will list the rest of the older events if there were more than the 6 with links so that visitors can get to look at them</div>
-        </div>
     </section>
     <!-- /Section: past events -->
     
@@ -167,72 +88,26 @@
                         {{--<img src="{{ URL::to('theme/img/dummy/img-1.jpg')}}" class="img-responsive" alt="" />--}}
                     {{--</div>--}}
                 {{--</div>--}}
-                <div class="col-sm-6 col-md-6">
 
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                06.11 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
+
+                @forelse($future_events as $event)
+                    <div class="col-sm-6 col-md-6">
+
+                        <div class="wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="service-box row ml-5">
+                                <div class="service-icon col-sm-1" align="center">
+                                    <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
+                                    {{\Carbon\Carbon::parse($event->date)->format('d.m')}}<br>{{\Carbon\Carbon::parse($event->date)->format('Y')}}
+                                </div>
+                                <div class="service-desc col-sm-10">
+                                    <h5 class="h-light"><a href="#" title="Click to read about event">{{$event->title}}</a></h5>
+                                    <p>{{$event->intro}}<br><a href="{{route('visit_page', [$event->getPage()->title, $event->getPage()->id])}}" class="btn btn-primary">Read More ></a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-sm-6 col-md-6">
-
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                06.11 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                06.11 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6">
-
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
-                        <div class="service-box row ml-5">
-                            <div class="service-icon col-sm-1" align="center">
-                                <a href="#" title="Click to read about event"><span class="fa fa-calendar fa-3x"></span></a>
-                                06.11 <br>2018
-                            </div>
-                            <div class="service-desc col-sm-10">
-                                <h5 class="h-light"><a href="#" title="Click to read about event">Event Title</a></h5>
-                                <p>Description of the event will be summarized to fit the space then for more details about the event including pictures,
-                                the user will click <br><a href="#" class="btn btn-primary">Read More ></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                @empty No future events yet
+                @endforelse
 
             </div>
         </div>

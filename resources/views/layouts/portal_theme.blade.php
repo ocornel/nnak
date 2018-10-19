@@ -47,7 +47,7 @@
         <div class="section__content section__content--p35">
             <div class="header3-wrap">
                 <div class="header__logo">
-                    <a href="#">
+                    <a href="{{route('index')}}">
                         <img src="{{URL::to('img/logdo.png')}}" alt="NNAK" />
                     </a>
                 </div>
@@ -158,7 +158,7 @@
         <div class="header-mobile__bar">
             <div class="container-fluid">
                 <div class="header-mobile-inner">
-                    <a class="logo" href="index.html">
+                    <a class="logo" href="{{route('index')}}">
                         <img src="{{URL::to('img/logo.png')}}" alt="NNAK" />
                     </a>
                     <button class="hamburger hamburger--slider" type="button">

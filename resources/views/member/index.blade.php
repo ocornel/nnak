@@ -4,7 +4,7 @@
 @section('content')
     <div class="container portal-content">
         <a href="{{route('new_member')}}" class="pull-right btn btn-primary">New Member</a>
-        These are the images that have been uploaded in the system and their context of upload. You may edit.
+        These are members that have been included in your website page. You may edit, add, remove.
         @forelse($members as $member)
             <hr>
             <div class="row">

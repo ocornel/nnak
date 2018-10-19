@@ -2,8 +2,8 @@
 @section('title') Events @endsection
 @section('content')
     <div class="container portal-content">
-        <a href="{{route('new_event')}}" class="pull-right btn btn-primary">New Testimonial</a>
-        These are the events you have received. You can add more, edit current or delete. All changes made here will reflect on the public website.
+        <a href="{{route('new_event')}}" class="pull-right btn btn-primary">New Event</a>
+        These are the events you have created. You can add more, edit current or delete. All changes made here will reflect on the public website.
         <div class="table-responsive table--no-card m-b-30">
             <table class="table table-borderless table-striped table-earning">
                 <thead>
