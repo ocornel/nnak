@@ -156,9 +156,14 @@ footer .widget h5 {
     font-weight: bold;
     width: 100%;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .dash-action:hover {
     background: var(--nnak-green);
     color: var(--nnak-blue);
+}
+
+.full-width {
+    width: 100%;
 }

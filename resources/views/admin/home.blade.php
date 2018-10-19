@@ -23,43 +23,50 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-3">
-                    <div class="statistic__item statistic__item--green">
-                        <h2 class="number">{{ $page_count }}</h2>
-                        <span class="desc">Pages</span>
-                        <div class="icon">
-                            <i class="fa fa-table"></i>
-                        </div>
-                    </div>
+                    <a href="{{route('page')}}" class="full-width">
+                        <div class="statistic__item statistic__item--green">
+                            <h2 class="number">{{ $page_count }}</h2>
+                            <span class="desc">Pages</span>
+                            <div class="icon">
+                                <i class="fa fa-table"></i>
+                            </div>
+                        </div></a>
                     <a href="{{route('new_page')}}" class="dash-action">Add page</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="statistic__item statistic__item--orange">
-                        <h2 class="number">{{ $event_count }}</h2>
-                        <span class="desc">Events</span>
-                        <div class="icon">
-                            <i class="fas fa-calendar-alt"></i>
+                    <a href="{{route('event')}}" class="full-width">
+                        <div class="statistic__item statistic__item--orange">
+                            <h2 class="number">{{ $event_count }}</h2>
+                            <span class="desc">Events</span>
+                            <div class="icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <a href="{{route('new_event')}}" class="dash-action">Add Event</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="statistic__item statistic__item--blue">
-                        <h2 class="number">{{ $image_count }}</h2>
-                        <span class="desc">Photo Uploads</span>
-                        <div class="icon">
-                            <i class="fa fa-images"></i>
+                    <a href="{{route('image')}}" class="full-width">
+                        <div class="statistic__item statistic__item--blue">
+                            <h2 class="number">{{ $image_count }}</h2>
+                            <span class="desc">Photo Uploads</span>
+                            <div class="icon">
+                                <i class="fa fa-images"></i>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <a href="{{route('new_image')}}" class="dash-action">New Upload</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
+                    <a href="{{route('testimonial')}}" class="full-width">
                     <div class="statistic__item statistic__item--red">
-                        <h2 class="number">{{ $testimonial_count }}</h2>
-                        <span class="desc">Testimonials Submitted</span>
-                        <div class="icon">
-                            <i class="fa fa-comments"></i>
+                            <h2 class="number">{{ $testimonial_count }}</h2>
+                            <span class="desc">Testimonials Submitted</span>
+                            <div class="icon">
+                                <i class="fa fa-comments"></i>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <a href="{{route('new_testimonial')}}" class="dash-action">Add Testimonial</a>
 
                 </div>

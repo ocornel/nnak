@@ -173,15 +173,15 @@
             <div class="container-fluid">
                 <ul class="navbar-mobile__list list-unstyled">
                     <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a class="js-arrow" href="{{route('home')}}"">
                             <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="chart.html">
+                        <a href="{{route('webinfo')}}"">
                             <i class="fas fa-chart-bar"></i>Web Info</a>
                     </li>
                     <li>
-                        <a href="table.html">
+                        <a href="{{route('page')}}"">
                             <i class="fas fa-table"></i>Pages</a>
                     </li>
                     <li class="has-sub">
@@ -189,22 +189,22 @@
                             <i class="fas fa-copy"></i>Contents</a>
                         <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                             <li>
-                                <a href="login.html">Components</a>
+                                <a href="{{route('component')}}">Components</a>
                             </li>
                             <li>
-                                <a href="register.html">Images</a>
+                                <a href="{{route('image')}}">Images</a>
                             </li>
                             <li>
-                                <a href="forget-pass.html">Members</a>
+                                <a href="{{route('member')}}">Members</a>
                             </li>
                             <li>
-                                <a href="forget-pass.html">Partners</a>
+                                <a href="{{route('partner')}}">Partners</a>
                             </li>
                             <li>
-                                <a href="forget-pass.html">Users</a>
+                                <a href="{{route('user')}}">Users</a>
                             </li>
                             <li>
-                                <a href="forget-pass.html">Slides</a>
+                                <a href="{{route('slide')}}">Slides</a>
                             </li>
                             <li>
                                 <a href="forget-pass.html">Testimonials</a>
@@ -212,7 +212,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="form.html">
+                        <a href="{{route('event')}}">
                             <i class="far fa-check-square"></i>Events</a>
                     </li>
                 </ul>
