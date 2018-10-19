@@ -1,7 +1,7 @@
 @extends('layouts.portal_theme')
 @section('title') New Page @endsection
 @section('content')
-    <div class="container portal-content">
+    <div class="container">
         <form action="{{ isset($page) ? route('update_page', $page->id) : route('store_page')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
             {{csrf_field()}}
             <div class="card edit-form">

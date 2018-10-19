@@ -146,3 +146,19 @@ footer .widget h5 {
     margin: 0;
     background: var(--nnak-green);
 }
+
+.dash-action{
+    background: var(--nnak-blue);
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--nnak-green);
+    font-weight: bold;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.dash-action:hover {
+    background: var(--nnak-green);
+    color: var(--nnak-blue);
+}

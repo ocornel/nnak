@@ -265,7 +265,7 @@
     <!-- END HEADER MOBILE -->
 
     <!-- PAGE CONTENT-->
-    <div class="page-content--bgf7">
+    <div class="page-content--bgf7 portal-content">
         {{--TODO put success or error message after actions--}}
         @yield('content')
 

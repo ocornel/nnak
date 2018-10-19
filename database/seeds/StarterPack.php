@@ -221,7 +221,7 @@ class StarterPack extends Seeder
                 'name' => "Home Card {$i}",
                 'title' => "Card {$i} Title",
                 'content' => 'Give a brief description concerning this card in this card. Preferably, yay long to fit in here.',
-                'icon' => $icons[$i],
+                'icon' => $icons[rand($i,500)],
             ]);
             $i ++;
         }
@@ -232,7 +232,7 @@ class StarterPack extends Seeder
                 'name' => "Benefit Card {$j}",
                 'title' => "Benefit {$j}",
                 'content' => 'Describe this benefit briefly',
-                'icon' => $icons[$i],
+                'icon' => $icons[rand($i,500)],
                 'position' => 2
             ]);
             $i ++; $j ++;
