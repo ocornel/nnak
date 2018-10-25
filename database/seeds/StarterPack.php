@@ -70,18 +70,23 @@ class StarterPack extends Seeder
         ]);
 
         WebInfo::create([
+            'name' => 'logo_text',
+            'content' => 'NNAK PIB-Mombasa',
+        ]);
+
+        WebInfo::create([
             'name' => 'address',
             'content' => 'Mombasa Town <br>Bla blabla street',
         ]);
 
         WebInfo::create([
             'name' => 'phone_1',
-            'content' => '+254 7XXXXXXXX',
+            'content' => '0718568913',
         ]);
 
         WebInfo::create([
             'name' => 'phone_2',
-            'content' => '+254 7YYYYYYYY',
+            'content' => '+254 720808193',
         ]);
 
         WebInfo::create([
@@ -127,6 +132,16 @@ class StarterPack extends Seeder
         WebInfo::create([
             'name' => 'values',
             'content' => 'Brief statement about your value.',
+        ]);;
+
+        WebInfo::create([
+            'name' => 'download_title',
+            'content' => 'You are a nurse? You\'d love to join us?.',
+        ]);;
+
+        WebInfo::create([
+            'name' => 'download_message',
+            'content' => 'We welcome you to download the NCK licence renewal form and membership form..',
         ]);
 
         /*
@@ -175,13 +190,14 @@ class StarterPack extends Seeder
 
         Partner::create([
             'name' => "Quick Web Apps",
-            'icon_url' => 'img/partner-2.jpg',
+            'icon_url' => 'img/partners/qwapps.jpg',
             'url' => 'http://quickwapps.com'
         ]);
 
         Partner::create([
             'name' => "NNAK Kenya",
-            'url' => 'https://www.nnak.or.ke/'
+            'url' => 'https://www.nnak.or.ke/',
+            'icon_url' => 'img/logo.jpeg',
         ]);
 
         /*

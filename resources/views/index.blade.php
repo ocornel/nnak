@@ -194,8 +194,8 @@
                             <div class="col-md-7">
                                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="cta-text">
-                                        <h3>You are a nurse? You'd love to join us?</h3>
-                                        <p>We welcome you to download the <a href="#" class="txt-blue" title="Link to download form could go here.">NCK licence renewal form</a> and <a href="#" title="Link for membership form could go here." class="txt-blue">membership form.</a></p>
+                                        <h3>{{\NNAK\Page::info('download_title')}}</h3>
+                                        <p>{{\NNAK\Page::info('download_message')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -673,46 +673,13 @@
 
         <div class="container">
             <div class="row">
+                @foreach($partners as $partner)
                 <div class="col-sm-6 col-md-3">
                     <div class="partner">
-                        <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-1.jpg')}}" alt="" /></a>
+                        <a href="{{$partner->url}}" target="_blank" title="{{$partner->name}}"><img src="{{ URL::to($partner->icon_url)}}" alt="{{$partner->name}}" style="width: 70%" /></a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="partner">
-                        <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-2.jpg')}}" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="partner">
-                        <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-3.jpg')}}" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="partner">
-                        <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-4.jpg')}}" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="partner">
-                        <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-1.jpg')}}" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="partner">
-                        <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-2.jpg')}}" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="partner">
-                        <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-3.jpg')}}" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="partner">
-                        <a href="#"><img src="{{ URL::to('theme/img/dummy/partner-4.jpg')}}" alt="" /></a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

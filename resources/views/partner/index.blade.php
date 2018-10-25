@@ -14,7 +14,7 @@
                 <div class="col-md">
                     <ul class="ul-no-decoration">
                         <li><b>Name: </b><span class="pull-right">{{$partner->name}}</span></li>
-                        <li><b>Website:</b> <span class="pull-right"><a href="{{$partner->url}}" title="{{$partner->url}}"><i class="fa fa-globe"> Visit Website</i></a></span></li>
+                        <li><b>Website:</b> <span class="pull-right"><a href="{{$partner->url}}" title="{{$partner->url}}" target="_blank"><i class="fa fa-globe"> Visit Website</i></a></span></li>
                         <li><b>Created On: </b><span class="pull-right">{{$partner->created_at}}</span></li>
                         <li><b>Updated On: </b><span class="pull-right">{{$partner->updated_at}}</span></li>
                         <li><span class="pull-right"><a href="{{route('edit_partner', $partner->id)}}" class="btn btn-primary">Edit</a></span></li>

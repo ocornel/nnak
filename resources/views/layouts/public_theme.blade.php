@@ -9,7 +9,7 @@
     <meta name="author" content="Martin Cornel">
 
     {{--favicon--}}
-    <link rel="icon" href="{{ URL::to('theme/img/logo.png') }}" type="image/gif">
+    <link rel="icon" href="{{ URL::to('theme/img/logo.jpeg') }}" type="image/gif">
 
   <title>{{NNAK\Page::info('title')}} | @yield('title')</title>
 
@@ -47,10 +47,10 @@
                     <i class="fa fa-bars"></i>
                 </button>
           <a class="navbar-brand" href="{{route('index')}}">
-                    <img src="{{ URL::to('img/logo.png')}}" alt="" width="150" height="40" />
+                    <img src="{{ URL::to('img/logo.jpeg')}}" alt="" height="70" style="margin-top: -15px;"/>
             {{--<span class="txt-blue txt-large">NNAK</span> <span class="txt-green txt-large">PIB</span><span class="txt-red">Mombasa County</span>--}}
-
           </a>
+          <div class="navbar-brand logo-text" >{{Page::info('logo_text')}}</div>
         </div>
           @include('parts.page_nav')
         <!-- /.navbar-collapse -->

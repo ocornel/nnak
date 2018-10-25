@@ -95,10 +95,10 @@ Route::post('/destroy_event/{event_id}', 'EventController@destroy')->name('destr
 Route::get('/partner', 'PartnerController@index')->name('partner');
 Route::get('/create_partner', 'PartnerController@create')->name('new_partner');
 Route::post('/store_partner', 'PartnerController@store')->name('store_partner');
-Route::get('/show_partner', 'PartnerController@show')->name('show_partner');
-Route::get('/edit_partner', 'PartnerController@edit')->name('edit_partner');
-Route::post('/update_partner', 'PartnerController@update')->name('update_partner');
-Route::post('/destroy_partner', 'PartnerController@destroy')->name('destroy_partner');
+Route::get('/show_partner/{partner_id}', 'PartnerController@show')->name('show_partner');
+Route::get('/edit_partner/{partner_id}', 'PartnerController@edit')->name('edit_partner');
+Route::post('/update_partner/{partner_id}', 'PartnerController@update')->name('update_partner');
+Route::post('/destroy_partner/{partner_id}', 'PartnerController@destroy')->name('destroy_partner');
 
 //Component
 Route::get('/component', 'ComponentController@index')->name('component');

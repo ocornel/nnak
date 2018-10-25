@@ -10,6 +10,7 @@ use NNAK\Link;
 use NNAK\Page;
 use Illuminate\Http\Request;
 use Auth;
+use NNAK\Partner;
 use NNAK\Slide;
 
 class PageController extends Controller
@@ -86,6 +87,7 @@ class PageController extends Controller
             'benefit_components' => Component::where('name', 'LIKE','Benefit%')->get(),
             'slides' => Slide::all(),
             'gallery_images' => Image::where('on_gallery', true)->get(),
+            'partners' => Partner::all(),
         ];
         return view('index', $context);
     }
