@@ -110,8 +110,9 @@ class SlideController extends Controller
         return redirect(route('slide'))->with('success', 'Slide updated successfully');
     }
 
-    public function destroy(Slide $slide)
+    public function destroy($slide_id)
     {
-        //
+        Slide::find($slide_id)->delete();
+        return redirect(route('slide'))->with('success', 'Slide deleted');
     }
 }
