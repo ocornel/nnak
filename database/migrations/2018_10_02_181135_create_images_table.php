@@ -19,7 +19,7 @@ class CreateImagesTable extends Migration
             $table->string('image_url');
             $table->string('caption');
             $table->string('description')->nullable();
-            $table->unsignedInteger('event_id');
+            $table->unsignedInteger('event_id')->nullable();
             $table->timestamps();
 
             $table->foreign('event_id')->references('id')->on('events');

@@ -2,6 +2,7 @@
 
 namespace NNAK\Http\Controllers;
 
+use NNAK\Image;
 use NNAK\Page;
 use NNAK\Slide;
 use Illuminate\Http\Request;
@@ -52,6 +53,13 @@ class SlideController extends Controller
             $file->move($destination, $name);
             $new_slide->image_url = substr($destination, 2)."/".$name;
             $new_slide->save();
+
+            Image::create([
+                'on_gallery' => false,
+                'image_url' => $new_slide->image_url,
+                'caption' => $new_slide->title,
+                'description' => $new_slide->tagline,
+                'event_id' => $new_slide->getPage()->getEvent()->id]);
         }
 
         return redirect(route('slide'))->with('success', 'Slide added successfully');
@@ -90,6 +98,13 @@ class SlideController extends Controller
             $file->move($destination, $name);
             $slide->image_url = substr($destination, 2)."/".$name;
             $slide->save();
+
+            Image::create([
+                'on_gallery' => false,
+                'image_url' => $slide->image_url,
+                'caption' => $slide->title,
+                'description' => $slide->tagline,
+                'event_id' => $slide->getPage()->getEvent()->id]);
         }
 
         return redirect(route('slide'))->with('success', 'Slide updated successfully');
