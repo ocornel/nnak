@@ -23,7 +23,6 @@
                         <td>{{$component->title}}</td>
                         <td><i class="fa {{$component->icon}}"></i></td>
                         <td>
-                            <a href="{{route('show_component',$component->id )}}"><i class="fa fa-info-circle"></i> View</a> &nbsp;
                             <a href="{{route('edit_component', $component->id)}}"><i class="fa fa-edit"></i> Edit</a>
                         </td>
                     </tr>

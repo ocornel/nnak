@@ -40,7 +40,8 @@ class ComponentController extends Controller
 
     public function update(Request $request, $component_id)
     {
-
+        Component::find($component_id)->update($request->all());
+        return redirect(route('component'))->with('success', 'Component updated successfully');
     }
 
     public function destroy(Component $component)

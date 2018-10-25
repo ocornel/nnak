@@ -308,8 +308,8 @@
 <script src="{{URL::to('admin_theme/vendor/bootstrap-4.1/popper.min.js')}}"></script>
 <script src="{{URL::to('admin_theme/vendor/bootstrap-4.1/bootstrap.min.js')}}"></script>
 <!-- Vendor JS       -->
-<script src="{{URL::to('admin_theme/vendor/slick/slick.min.js')}}">
-</script>
+<script src="{{URL::to('admin_theme/vendor/slick/slick.min.js')}}"></script>
+
 <script src="{{URL::to('admin_theme/vendor/wow/wow.min.js')}}"></script>
 <script src="{{URL::to('admin_theme/vendor/animsition/animsition.min.js')}}"></script>
 <script src="{{URL::to('admin_theme/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js')}}">
@@ -325,6 +325,12 @@
 
 <!-- Main JS-->
 <script src="{{URL::to('admin_theme/js/main.js')}}"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+</script>
 @yield('scripts')
 </body>
 

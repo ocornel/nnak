@@ -5,6 +5,7 @@ namespace NNAK\Http\Controllers;
 use Carbon\Carbon;
 use NNAK\Component;
 use NNAK\Event;
+use NNAK\Image;
 use NNAK\Link;
 use NNAK\Page;
 use Illuminate\Http\Request;
@@ -84,6 +85,7 @@ class PageController extends Controller
             'home_components' => Component::where('name', 'LIKE','Home%')->get(),
             'benefit_components' => Component::where('name', 'LIKE','Benefit%')->get(),
             'slides' => Slide::all(),
+            'gallery_images' => Image::where('on_gallery', true)->get(),
         ];
         return view('index', $context);
     }
