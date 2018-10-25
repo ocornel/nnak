@@ -2,6 +2,7 @@
 
 namespace NNAK\Http\Controllers;
 
+use NNAK\Event;
 use NNAK\Image;
 use Illuminate\Http\Request;
 
@@ -58,9 +59,14 @@ class ImageController extends Controller
      * @param  \NNAK\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function edit(Image $image)
+    public function edit($image_id)
     {
-        //
+        $context = [
+            'image' => Image::find($image_id),
+            'events' => Event::all(),
+        ];
+
+        return view('image.create', $context);
     }
 
     /**
@@ -70,9 +76,10 @@ class ImageController extends Controller
      * @param  \NNAK\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Image $image)
+    public function update(Request $request, $image_id)
     {
-        //
+        Image::find($image_id)->update($request->all());
+        return redirect(route('image'))->with('success', 'Image details updated.');
     }
 
     /**

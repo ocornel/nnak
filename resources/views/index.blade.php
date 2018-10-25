@@ -4,7 +4,9 @@
     <li class="active"><a href="#intro">Home</a></li>
     <li><a href="#benefits">Benefits</a></li>
     <li><a href="#members">Members</a></li>
-    <li><a href="#gallery">Gallery</a></li>
+    @if(sizeof($gallery_images) > 0)
+        <li><a href="#gallery">Gallery</a></li>
+    @endif
     <li><a href="#testimonial">Testimonials</a></li>
     {{--<li class="dropdown">--}}
         {{--<a href="#" class="dropdown-toggle red" data-toggle="dropdown">--}}
@@ -321,6 +323,7 @@
 
 
     <!-- Section: works -->
+    @if(sizeof($gallery_images) > 0)
     <section id="gallery" class="home-section paddingbot-60">
         <div class="container marginbot-50">
             <div class="row">
@@ -344,11 +347,13 @@
                             @foreach($gallery_images as $image)
                                 <div class="item"><a href="{{URL::to($image->image_url)}}" title="{{$image->title}}" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg')}}"><img src="{{ URL::to($image->image_url)}}" class="img-responsive" alt="img"></a></div>
                             @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    @endif
     <!-- /Section: works -->
 
 
