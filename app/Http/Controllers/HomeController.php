@@ -5,7 +5,10 @@ namespace NNAK\Http\Controllers;
 use Illuminate\Http\Request;
 use NNAK\Event;
 use NNAK\Image;
+use NNAK\Member;
 use NNAK\Page;
+use NNAK\Partner;
+use NNAK\Slide;
 use NNAK\Testimonial;
 
 class HomeController extends Controller
@@ -28,10 +31,10 @@ class HomeController extends Controller
     public function index()
     {
         $context = [
-            'page_count' => Page::all()->count(),
+            'member_count' => Member::all()->count(),
             'event_count' =>Event::all()->count(),
-            'image_count' =>Image::all()->count(),
-            'testimonial_count' =>Testimonial::all()->count()
+            'partner_count' =>Partner::all()->count(),
+            'slide_count' =>Slide::all()->count()
         ];
         return view('admin.home', $context);
     }

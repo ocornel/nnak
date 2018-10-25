@@ -10,8 +10,8 @@
                     @if(isset($member))
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="col-md"><b>Created on: </b>{{$member->created_at}}</div>
-                        <div class="col-md"><b>Last Updated: </b>{{$member->updated_at}}</div>
+                        <div class="col-md"><b>Created on: </b>{{\Carbon\Carbon::parse($member->created_at)->format('d M, Y H:i')}}</div>
+                        <div class="col-md"><b>Last Updated: </b>{{\Carbon\Carbon::parse($member->updated_at)->format('d M, Y H:i')}}</div>
                     </div>
                     @endif
                     <br>

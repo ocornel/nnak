@@ -22,8 +22,8 @@
                     <tr>
                         <td>{{$page->title}}</td>
                         <td>{{$page->getCreator()->name}}</td>
-                        <td>{{$page->created_at}}</td>
-                        <td>{{$page->updated_at}}</td>
+                        <td>{{\Carbon\Carbon::parse($page->created_at)->format('d M, Y H:i')}}</td>
+                        <td>{{\Carbon\Carbon::parse($page->updated_at)->format('d M, Y H:i')}}</td>
                         <td>
                             <a href="{{route('visit_page', [$page->url,$page->id])}}" class="text-success"><i class="fa fa-info-circle"> View</i></a> &nbsp  &nbsp
                             <a href="{{route('edit_page', $page->id)}}" class="text-warning"><i class="fa fa-edit"> Edit</i></a>

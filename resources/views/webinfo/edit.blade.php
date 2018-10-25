@@ -9,11 +9,11 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="col-md"><b>Info Created on: </b>{{$webinfo->created_at}}</div>
+                        <div class="col-md"><b>Info Created on: </b>{{\Carbon\Carbon::parse($webinfo->created_at)->format('d M, Y H:i')}}</div>
                     </div>
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="col-md"><b>Info Last Updated: </b>{{$webinfo->updated_at}}</div>
+                        <div class="col-md"><b>Info Last Updated: </b>{{\Carbon\Carbon::parse($webinfo->updated_at)->format('d M, Y H:i')}}</div>
                     </div>
                     <br>
                         <div class="row form-group">

@@ -20,8 +20,8 @@
                     <tr>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td>{{$user->created_at}}</td>
-                        <td>{{$user->updated_at}}</td>
+                        <td>{{\Carbon\Carbon::parse($user->created_at)->format('d M, Y H:i')}}</td>
+                        <td>{{\Carbon\Carbon::parse($user->updated_at)->format('d M, Y H:i')}}</td>
                         <td>
                             <a href="{{route('edit_user', $user->id)}}" class="text-warning"><i class="fa fa-edit"> Edit</i></a> &nbsp;
                             <a href="{{$user->id == Auth::user()->id ? '' : route('destroy_user', $user->id)}}" class="text-danger" {{$user->id == Auth::user()->id ? 'inactive' : ''}}><i class="fa fa-trash"> Delete</i></a>

@@ -10,7 +10,7 @@
     <meta name="keywords" content="quickwapps Martin Cornel NNAK Mombasa County">
 
     {{--favicon--}}
-    <link rel="icon" href="{{ URL::to('theme/img/logo.png') }}" type="image/gif">
+    <link rel="icon" href="{{ URL::to('img/logo.jpeg') }}" type="image/gif">
 
     <!-- Title Page-->
     <title>@yield('title') | {{NNAK\Page::info('title')}} </title>
@@ -56,7 +56,7 @@
             <div class="header3-wrap">
                 <div class="header__logo">
                     <a href="{{route('index')}}">
-                        <img src="{{URL::to('img/logdo.png')}}" alt="NNAK" />
+                        <img src="{{URL::to('img/logo.jpeg')}}" alt="NNAK" style="height: 55px"/>
                     </a>
                 </div>
                 <div class="header__navbar">
@@ -174,7 +174,7 @@
             <div class="container-fluid">
                 <div class="header-mobile-inner">
                     <a class="logo" href="{{route('index')}}">
-                        <img src="{{URL::to('img/logo.png')}}" alt="NNAK" />
+                        <img src="{{URL::to('img/logo.jpeg')}}" alt="NNAK"  style="height: 55px" />
                     </a>
                     <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">

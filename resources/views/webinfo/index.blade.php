@@ -19,8 +19,8 @@
                     <tr>
                         <td>{{$webinfo->name}}</td>
                         <td>{{$webinfo->content}}</td>
-                        <td>{{$webinfo->created_at}}</td>
-                        <td>{{$webinfo->updated_at}}</td>
+                        <td>{{\Carbon\Carbon::parse($webinfo->created_at)->format('d M, Y H:i')}}</td>
+                        <td>{{\Carbon\Carbon::parse($webinfo->updated_at)->format('d M, Y H:i')}}</td>
                         <td>
                             <a href="{{route('edit_webinfo', $webinfo->id)}}"><i class="fa fa-edit"></i> Edit</a>
                         </td>

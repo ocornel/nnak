@@ -10,8 +10,8 @@
                     @if(isset($page))
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="col-md"><b>Created on: </b>{{$page->created_at}}</div>
-                        <div class="col-md"><b>Last Updated: </b>{{$page->updated_at}}</div>
+                        <div class="col-md"><b>Created on: </b>{{\Carbon\Carbon::parse($page->created_at)->format('d M, Y H:i')}}</div>
+                        <div class="col-md"><b>Last Updated: </b>{{\Carbon\Carbon::parse($page->updated_at)->format('d M, Y H:i')}}</div>
                     </div>
                     @endif
                     <br>

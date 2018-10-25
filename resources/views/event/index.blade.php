@@ -24,8 +24,8 @@
                         <td>{{$event->getCreator()->name}}</td>
                         <td class="{{$event->date < \Carbon\Carbon::now() ? 'text-danger' : 'text-success'}}">{{$event->date}}</td>
                         <td>{{$event->getViews()}}</td>
-                        <td>{{$event->created_at}}</td>
-                        <td>{{$event->updated_at}}</td>
+                        <td>{{\Carbon\Carbon::parse($event->created_at)->format('d M, Y H:i')}}</td>
+                        <td>{{\Carbon\Carbon::parse($event->updated_at)->format('d M, Y H:i')}}</td>
                         <td>
                             <a href="{{route('visit_page', [$event->getPage()->url, $event->page_id])}}" class="text-success"><i class="fa fa-info-circle"> View</i></a> &nbsp;
                             <a href="{{route('edit_event', $event->id)}}" class="text-warning"><i class="fa fa-edit"> Edit</i></a> &nbsp;

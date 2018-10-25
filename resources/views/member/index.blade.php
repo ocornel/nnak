@@ -16,8 +16,8 @@
                         <li><b>Name: </b><span class="pull-right">{{$member->name}}</span></li>
                         <li><b>Profession:</b> <span class="pull-right">{{$member->profession}}</span></li>
                         <li><b>Role: </b><span class="pull-right">{{$member->role}}</span></li>
-                        <li><b>Created On: </b><span class="pull-right">{{$member->created_at}}</span></li>
-                        <li><b>Updated On: </b><span class="pull-right">{{$member->updated_at}}</span></li>
+                        <li><b>Created On: </b><span class="pull-right">{{\Carbon\Carbon::parse($member->created_at)->format('d M, Y H:i')}}</span></li>
+                        <li><b>Updated On: </b><span class="pull-right">{{\Carbon\Carbon::parse($member->updated_at)->format('d M, Y H:i')}}</span></li>
                         <li class="pull-right"><span><a href="{{route('edit_member', $member->id)}}" class="btn btn-success"><i class="fa fa-edit"> Edit</i></a></span> &nbsp;
                             <span class="text-danger"><a href="{{route('destroy_member', $member->id)}}" class="btn btn-danger"><i class="fa fa-trash"> Delete</i></a></span></li>      
                     </ul>

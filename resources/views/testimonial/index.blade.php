@@ -24,8 +24,8 @@
                         <td>{{$testimonial->title}}</td>
                         <td>{{$testimonial->client_name}}</td>
                         <td>{{$testimonial->rating}}</td>
-                        <td>{{$testimonial->created_at}}</td>
-                        <td>{{$testimonial->updated_at}}</td>
+                        <td>{{\Carbon\Carbon::parse($testimonial->created_at)->format('d M, Y H:i')}}</td>
+                        <td>{{\Carbon\Carbon::parse($testimonial->updated_at)->format('d M, Y H:i')}}</td>
                         <td>
                             <a href="{{route('show_testimonial', $testimonial->id)}}" class="text-success"><i class="fa fa-info-circle"> View</i></a> &nbsp;
                             <a href="{{route('edit_testimonial', $testimonial->id)}}" class="text-warning"><i class="fa fa-edit"> Edit</i></a> &nbsp;

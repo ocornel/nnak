@@ -10,8 +10,8 @@
                     @if(isset($slide))
                     <div class="row">
                         <div class="col-md-3"></div>
-                        <div class="col-md"><b>Created on: </b>{{$slide->created_at}}</div>
-                        <div class="col-md"><b>Last Updated: </b>{{$slide->updated_at}}</div>
+                        <div class="col-md"><b>Created on: </b>{{\Carbon\Carbon::parse($slide->created_at)->format('d M, Y H:i')}}</div>
+                        <div class="col-md"><b>Last Updated: </b>{{\Carbon\Carbon::parse($slide->updated_at)->format('d M, Y H:i')}}</div>
                     </div>
                     @endif
                     <br>

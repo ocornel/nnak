@@ -15,8 +15,8 @@
                         <li><b>Caption: </b><span class="pull-right">{{$image->caption}}</span></li>
                         <li><b>Shown On Gallery:</b> <span class="pull-right">{{$image->on_gallery == 1? "Yes": "No"}}</span></li>
                         <li><b>Event: </b><span class="pull-right">{{$image->getEventPage()->title}}</span></li>
-                        <li><b>Created On: </b><span class="pull-right">{{$image->created_at}}</span></li>
-                        <li><b>Updated On: </b><span class="pull-right">{{$image->updated_at}}</span></li>
+                        <li><b>Created On: </b><span class="pull-right">{{\Carbon\Carbon::parse($image->created_at)->format('d M, Y H:i')}}</span></li>
+                        <li><b>Updated On: </b><span class="pull-right">{{\Carbon\Carbon::parse($image->updated_at)->format('d M, Y H:i')}}</span></li>
                         <li><b>Description:</b> {{$image->description}}</li>
                         <li><span class="pull-right"><a href="{{route('edit_image', $image->id)}}" class="btn btn-primary">Edit</a></span></li>
                     </ul>

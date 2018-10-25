@@ -9,7 +9,7 @@
     <meta name="author" content="Martin Cornel">
 
     {{--favicon--}}
-    <link rel="icon" href="{{ URL::to('theme/img/logo.jpeg') }}" type="image/gif">
+  <link rel="icon" href="{{ URL::to('img/logo.jpeg') }}" type="image/gif">
 
   <title>{{NNAK\Page::info('title')}} | @yield('title')</title>
 

@@ -23,15 +23,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-3">
-                    <a href="{{route('page')}}" class="full-width">
+                    <a href="{{route('member')}}" class="full-width">
                         <div class="statistic__item statistic__item--green">
-                            <h2 class="number">{{ $page_count }}</h2>
-                            <span class="desc">Pages</span>
+                            <h2 class="number">{{ $member_count }}</h2>
+                            <span class="desc">Members</span>
                             <div class="icon">
                                 <i class="fa fa-table"></i>
                             </div>
                         </div></a>
-                    <a href="{{route('new_page')}}" class="dash-action">Add page</a>
+                    <a href="{{route('new_member')}}" class="dash-action">Add member</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <a href="{{route('event')}}" class="full-width">
@@ -46,28 +46,28 @@
                     <a href="{{route('new_event')}}" class="dash-action">Add Event</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <a href="{{route('image')}}" class="full-width">
+                    <a href="{{route('partner')}}" class="full-width">
                         <div class="statistic__item statistic__item--blue">
-                            <h2 class="number">{{ $image_count }}</h2>
-                            <span class="desc">Photo Uploads</span>
+                            <h2 class="number">{{ $partner_count }}</h2>
+                            <span class="desc">Partners</span>
                             <div class="icon">
-                                <i class="fa fa-images"></i>
+                                <i class="fa fa-partners"></i>
                             </div>
                         </div>
                     </a>
-                    <a href="{{route('new_image')}}" class="dash-action">New Upload</a>
+                    <a href="{{route('new_partner')}}" class="dash-action">New Partner</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <a href="{{route('testimonial')}}" class="full-width">
+                    <a href="{{route('slide')}}" class="full-width">
                     <div class="statistic__item statistic__item--red">
-                            <h2 class="number">{{ $testimonial_count }}</h2>
-                            <span class="desc">Testimonials Submitted</span>
+                            <h2 class="number">{{ $slide_count }}</h2>
+                            <span class="desc">Slides Showing</span>
                             <div class="icon">
                                 <i class="fa fa-comments"></i>
                             </div>
                         </div>
                     </a>
-                    <a href="{{route('new_testimonial')}}" class="dash-action">Add Testimonial</a>
+                    <a href="{{route('new_slide')}}" class="dash-action">Add Slide</a>
 
                 </div>
             </div>
