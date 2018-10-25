@@ -28,36 +28,6 @@
                 <div id="carousel-reviews" class="carousel slide nnak-slide" data-ride="carousel">
 
                     <div class="carousel-inner">
-
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                                        <h2 class="h-ultra">Slide 1 Title</h2>
-                                    </div>
-                                    <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-                                        <h4 class="h-light">Slide One tagline</h4>
-                                    </div>
-                                    <div class="well well-trans">
-                                        <div class="wow fadeInRight" data-wow-delay="0.1s">
-
-                                            Slide One content will go here <br>
-                                            <p>
-                                                You could use any text to generally invite people to the website. Note that this is the first page visitors see.
-                                            </p>
-                                            <p class="text-right wow bounceIn" data-wow-delay="0.4s">
-                                                <a href="#" class="btn btn-skin btn-lg">Learn more <i class="fa fa-angle-right"></i></a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-                                        <img src="{{ URL::to('theme/img/dummy/img-1.png')}}" class="img-responsive" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         @foreach($slides as $slide)
                         <div class="item">
                             <div class="row">
@@ -179,10 +149,6 @@
                         <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                 </div>
-
-
-
-
             </div>
         </div>
     </section>
