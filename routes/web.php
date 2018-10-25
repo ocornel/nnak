@@ -53,7 +53,7 @@ Route::post('/store_member', 'MemberController@store')->name('store_member');
 Route::get('/show_member', 'MemberController@show')->name('show_member');
 Route::get('/edit_member/{member_id}', 'MemberController@edit')->name('edit_member');
 Route::post('/update_member', 'MemberController@update')->name('update_member');
-Route::post('/destroy_member/{member_id}', 'MemberController@destroy')->name('destroy_member');
+Route::get('/destroy_member/{member_id}', 'MemberController@destroy')->name('destroy_member');
 
 //User
 Route::get('/user', 'UserController@index')->name('user');
@@ -62,7 +62,7 @@ Route::post('/store_user', 'UserController@store')->name('store_user');
 Route::get('/show_user/{user_id}', 'UserController@show')->name('show_user');
 Route::get('/edit_user/{user_id}', 'UserController@edit')->name('edit_user');
 Route::post('/update_user', 'UserController@update')->name('update_user');
-Route::post('/destroy_user/{user_id}', 'UserController@destroy')->name('destroy_user');
+Route::get('/destroy_user/{user_id}', 'UserController@destroy')->name('destroy_user');
 
 //Testimonial
 Route::get('/testimonial', 'TestimonialController@index')->name('testimonial');
@@ -71,7 +71,7 @@ Route::post('/store_testimonial', 'TestimonialController@store')->name('store_te
 Route::get('/show_testimonial/{testimonial_id}', 'TestimonialController@show')->name('show_testimonial');
 Route::get('/edit_testimonial/{testimonial_id}', 'TestimonialController@edit')->name('edit_testimonial');
 Route::post('/update_testimonial', 'TestimonialController@update')->name('update_testimonial');
-Route::post('/destroy_testimonial/{testimonial_id}', 'TestimonialController@destroy')->name('destroy_testimonial');
+Route::get('/destroy_testimonial/{testimonial_id}', 'TestimonialController@destroy')->name('destroy_testimonial');
 
 //Slide
 Route::get('/slide', 'SlideController@index')->name('slide');
@@ -89,7 +89,7 @@ Route::post('/store_event', 'EventController@store')->name('store_event');
 Route::get('/show_event/{event_id}', 'EventController@show')->name('show_event');
 Route::get('/edit_event/{event_id}', 'EventController@edit')->name('edit_event');
 Route::post('/update_event/{event_id}', 'EventController@update')->name('update_event');
-Route::post('/destroy_event/{event_id}', 'EventController@destroy')->name('destroy_event');
+Route::get('/destroy_event/{event_id}', 'EventController@destroy')->name('destroy_event');
 
 //Partner
 Route::get('/partner', 'PartnerController@index')->name('partner');
@@ -98,7 +98,7 @@ Route::post('/store_partner', 'PartnerController@store')->name('store_partner');
 Route::get('/show_partner/{partner_id}', 'PartnerController@show')->name('show_partner');
 Route::get('/edit_partner/{partner_id}', 'PartnerController@edit')->name('edit_partner');
 Route::post('/update_partner/{partner_id}', 'PartnerController@update')->name('update_partner');
-Route::post('/destroy_partner/{partner_id}', 'PartnerController@destroy')->name('destroy_partner');
+Route::get('/destroy_partner/{partner_id}', 'PartnerController@destroy')->name('destroy_partner');
 
 //Component
 Route::get('/component', 'ComponentController@index')->name('component');

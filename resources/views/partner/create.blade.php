@@ -44,7 +44,7 @@
                                    @if(!isset($partner))required @endif
                                    value="{{isset($partner) ? $partner->image_url  : old('partner_image')}}">
                             @if(isset($partner))
-                            <img style="max-width: 100%" id="icon_url"
+                            <img style="max-width: 50%" id="icon_url"
                                  src="../{{$partner->icon_url}}"
                             />
                             @endif

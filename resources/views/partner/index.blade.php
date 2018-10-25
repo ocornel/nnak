@@ -17,8 +17,8 @@
                         <li><b>Website:</b> <span class="pull-right"><a href="{{$partner->url}}" title="{{$partner->url}}" target="_blank"><i class="fa fa-globe"> Visit Website</i></a></span></li>
                         <li><b>Created On: </b><span class="pull-right">{{$partner->created_at}}</span></li>
                         <li><b>Updated On: </b><span class="pull-right">{{$partner->updated_at}}</span></li>
-                        <li><span class="pull-right"><a href="{{route('edit_partner', $partner->id)}}" class="btn btn-primary">Edit</a></span></li>
-                    </ul>
+                        <li class="pull-right"><span><a href="{{route('edit_partner', $partner->id)}}" class="btn btn-success"><i class="fa fa-edit"> Edit</i></a></span> &nbsp;
+                            <span class="text-danger"><a href="{{route('destroy_partner', $partner->id)}}" class="btn btn-danger"><i class="fa fa-trash"> Delete</i></a></span></li>                    </ul>
                 </div>
             </div>
         @empty

@@ -18,7 +18,8 @@
                         <li><b>Page:</b> <span class="pull-right"><a href="{{route('visit_page', [$slide->getPage()->url, $slide->page_id])}}" title="{{$slide->getPage()->title}}"><i class="fa fa-globe"> Visit Page</i></a></span></li>
                         <li><b>Created On: </b><span class="pull-right">{{$slide->created_at}}</span></li>
                         <li><b>Updated On: </b><span class="pull-right">{{$slide->updated_at}}</span></li>
-                        <li class="pull-right"><span><a href="{{route('edit_slide', $slide->id)}}" class="btn btn-success"><i class="fa fa-edit"> Edit</i></a></span> &nbsp; <span class="text-danger"><a href="{{route('destroy_slide', $slide->id)}}" class="btn btn-danger"><i class="fa fa-trash"> Delete</i></a></span></li>
+                        <li class="pull-right"><span><a href="{{route('edit_slide', $slide->id)}}" class="btn btn-success"><i class="fa fa-edit"> Edit</i></a></span> &nbsp;
+                            <span class="text-danger"><a href="{{route('destroy_slide', $slide->id)}}" class="btn btn-danger"><i class="fa fa-trash"> Delete</i></a></span></li>
                     </ul>
                 </div>
             </div>

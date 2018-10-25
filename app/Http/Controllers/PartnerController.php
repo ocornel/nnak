@@ -98,8 +98,9 @@ class PartnerController extends Controller
      * @param  \NNAK\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Partner $partner)
+    public function destroy($partner_id)
     {
-        //
+        Partner::find($partner_id)->delete();
+        return redirect(route('partner'))->with('success', 'Partner deleted');
     }
 }
