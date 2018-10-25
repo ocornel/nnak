@@ -275,21 +275,26 @@
 
                     <div id="filters-container" class="cbp-l-filters-alignLeft">
                         <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All (
-                            <div class="cbp-filter-counter"></div>)</div>
-                        <div data-filter=".administrative" class="cbp-filter-item">Administrative (
-                            <div class="cbp-filter-counter"></div>)</div>
-                        <div data-filter=".nurse" class="cbp-filter-item">Nurses (
-                            <div class="cbp-filter-counter"></div>)</div>
-                        <div data-filter=".stakeholder" class="cbp-filter-item">Stakeholders (
-                            <div class="cbp-filter-counter"></div>)</div>
+                            <div class="cbp-filter-counter"></div>)
+                        </div>
+                        @foreach($roles as $role)
+                        <div data-filter=".{{$role}}" class="cbp-filter-item">{{$role}}
+                            (<div class="cbp-filter-counter"></div>)
+                        </div>
+                        @endforeach
+                        {{--<div data-filter=".nurse" class="cbp-filter-item">Nurses (--}}
+                            {{--<div class="cbp-filter-counter"></div>)</div>--}}
+                        {{--<div data-filter=".stakeholder" class="cbp-filter-item">Stakeholders (--}}
+                            {{--<div class="cbp-filter-counter"></div>)</div>--}}
                     </div>
 
                     <div id="grid-container" class="cbp-l-grid-team">
                         <ul>
-                            <li class="cbp-item nurse">
-                                <a href="../../../public/theme/doctors/member1.html" class="cbp-caption cbp-singlePage">
+                            @foreach($members as $member)
+                            <li class="cbp-item {{$member->role}}">
+                                <a href="{{route('show_member', $member->id)}}" class="cbp-caption cbp-singlePage">
                                     <div class="cbp-caption-defaultWrap">
-                                        <img src="{{ URL::to('theme/img/team/1.jpg')}}" alt="" width="100%">
+                                        <img src="{{ URL::to($member->image_url)}}" alt="" width="100%">
                                     </div>
                                     <div class="cbp-caption-activeWrap">
                                         <div class="cbp-l-caption-alignCenter">
@@ -299,105 +304,10 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="../../../public/theme/doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Alice Grue</a>
-                                <div class="cbp-l-grid-team-position">Psychiatrist</div>
+                                <a href="{{route('show_member', $member->id)}}" class="cbp-singlePage cbp-l-grid-team-name">{{$member->name}}</a>
+                                <div class="cbp-l-grid-team-position">{{$member->profession}}</div>
                             </li>
-                            <li class="cbp-item administrative">
-                                <a href="../../../public/theme/doctors/member2.html" class="cbp-caption cbp-singlePage">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="{{ URL::to('theme/img/team/2.jpg')}}" alt="" width="100%">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="../../../public/theme/doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Tomas Murphy</a>
-                                <div class="cbp-l-grid-team-position">Treasurer</div>
-                            </li>
-                            <li class="cbp-item stakeholder">
-                                <a href="../../../public/theme/doctors/member4.html" class="cbp-caption cbp-singlePage">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="{{ URL::to('theme/img/team/4.jpg')}}" alt="" width="100%">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="../../../public/theme/doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Adam Taylor</a>
-                                <div class="cbp-l-grid-team-position">Neurologist</div>
-                            </li>
-                            <li class="cbp-item nurse">
-                                <a href="../../../public/theme/doctors/member1.html" class="cbp-caption cbp-singlePage">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="{{ URL::to('theme/img/dummy/img-1.png')}}" alt="" width="100%">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="../../../public/theme/doctors/member1.html" class="cbp-singlePage cbp-l-grid-team-name">Jane Song</a>
-                                <div class="cbp-l-grid-team-position">Nurse</div>
-                            </li>
-                            <li class="cbp-item administrative">
-                                <a href="../../../public/theme/doctors/member2.html" class="cbp-caption cbp-singlePage">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="{{ URL::to('theme/img/team/2.jpg')}}" alt="" width="100%">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="../../../public/theme/doctors/member2.html" class="cbp-singlePage cbp-l-grid-team-name">Joseph Murphy</a>
-                                <div class="cbp-l-grid-team-position">Chair person</div>
-                            </li>
-                            <li class="cbp-item administrative">
-                                <a href="../../../public/theme/doctors/member3.html" class="cbp-caption cbp-singlePage">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="{{ URL::to('theme/img/team/3.jpg')}}" alt="" width="100%">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="../../../public/theme/doctors/member3.html" class="cbp-singlePage cbp-l-grid-team-name">Alison Davis</a>
-                                <div class="cbp-l-grid-team-position">Secretary</div>
-                            </li>
-                            <li class="cbp-item stakeholder">
-                                <a href="../../../public/theme/doctors/member4.html" class="cbp-caption cbp-singlePage">
-                                    <div class="cbp-caption-defaultWrap">
-                                        <img src="{{ URL::to('theme/img/team/4.jpg')}}" alt="" width="100%">
-                                    </div>
-                                    <div class="cbp-caption-activeWrap">
-                                        <div class="cbp-l-caption-alignCenter">
-                                            <div class="cbp-l-caption-body">
-                                                <div class="cbp-l-caption-text">VIEW PROFILE</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="../../../public/theme/doctors/member4.html" class="cbp-singlePage cbp-l-grid-team-name">Kelvin Taylor</a>
-                                <div class="cbp-l-grid-team-position">Medical Donor</div>
-                            </li>
+                            @endforeach
 
                         </ul>
                     </div>

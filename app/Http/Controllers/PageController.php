@@ -7,6 +7,7 @@ use NNAK\Component;
 use NNAK\Event;
 use NNAK\Image;
 use NNAK\Link;
+use NNAK\Member;
 use NNAK\Page;
 use Illuminate\Http\Request;
 use Auth;
@@ -81,6 +82,12 @@ class PageController extends Controller
     }
 
     public function index_page() {
+        $roles = [];
+        $members = Member::all();
+        foreach ($members as $member) {
+            array_push($roles, $member->role);
+        }
+        $roles = array_unique($roles);
         $context = [
             'links' => Link::all(),
             'home_components' => Component::where('name', 'LIKE','Home%')->get(),
@@ -88,6 +95,8 @@ class PageController extends Controller
             'slides' => Slide::all(),
             'gallery_images' => Image::where('on_gallery', true)->get(),
             'partners' => Partner::all(),
+            'members' => $members,
+            'roles' => $roles,
         ];
         return view('index', $context);
     }

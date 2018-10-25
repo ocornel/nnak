@@ -48,6 +48,7 @@ class MemberController extends Controller
             $new_member->image_url = substr($destination, 2)."/".$name;
             $new_member->save();
         }
+        $new_member->role = strtolower($new_member->role);
 
         return redirect(route('member'))->with('success', 'Member added successfully');
     }
@@ -58,17 +59,15 @@ class MemberController extends Controller
      * @param  \NNAK\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function show(Member $member)
+    public function show($member_id)
     {
-        //
+        $context = [
+            'member' => Member::find($member_id),
+        ];
+
+        return view('member.show', $context);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \NNAK\Member  $member
-     * @return \Illuminate\Http\Response
-     */
     public function edit($member_id)
     {
         $context = [
@@ -78,13 +77,6 @@ class MemberController extends Controller
         return view('member.create', $context);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \NNAK\Member  $member
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request,  $member_id)
     {
         $member = Member::find($member_id);
@@ -98,16 +90,12 @@ class MemberController extends Controller
             $member->image_url = substr($destination, 2)."/".$name;
             $member->save();
         }
+        $member->role = strtolower($member->role);
+
 
         return redirect(route('member'))->with('success', 'Member updated successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \NNAK\Member  $member
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($member_id)
     {
         Member::find($member_id)->delete();

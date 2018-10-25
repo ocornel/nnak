@@ -8,7 +8,7 @@
         @forelse($members as $member)
             <hr>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="{{URL::to($member->image_url)}}" alt="" style="width: 100%">
                 </div>
                 <div class="col-md">
@@ -18,12 +18,12 @@
                         <li><b>Role: </b><span class="pull-right">{{$member->role}}</span></li>
                         <li><b>Created On: </b><span class="pull-right">{{$member->created_at}}</span></li>
                         <li><b>Updated On: </b><span class="pull-right">{{$member->updated_at}}</span></li>
-                        <li><b>Profile:</b> {{$member->profile}}</li>
                         <li class="pull-right"><span><a href="{{route('edit_member', $member->id)}}" class="btn btn-success"><i class="fa fa-edit"> Edit</i></a></span> &nbsp;
                             <span class="text-danger"><a href="{{route('destroy_member', $member->id)}}" class="btn btn-danger"><i class="fa fa-trash"> Delete</i></a></span></li>      
                     </ul>
                 </div>
             </div>
+            <b>Profile:</b> {!! $member->profile !!}
         @empty
             <tr>Nothing to show</tr>
         @endforelse

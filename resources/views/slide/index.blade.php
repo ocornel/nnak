@@ -23,7 +23,7 @@
                     </ul>
                 </div>
             </div>
-            <b>Content:</b> {{$slide->title}}
+            <b>Content:</b> {{$slide->content}}
         @empty
             <tr>Nothing to show</tr>
     @endforelse
