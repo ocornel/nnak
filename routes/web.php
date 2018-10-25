@@ -79,7 +79,7 @@ Route::get('/create_slide', 'SlideController@create')->name('new_slide');
 Route::post('/store_slide', 'SlideController@store')->name('store_slide');
 Route::get('/show_slide/{slide_id}', 'SlideController@show')->name('show_slide');
 Route::get('/edit_slide/{slide_id}', 'SlideController@edit')->name('edit_slide');
-Route::post('/update_slide', 'SlideController@update')->name('update_slide');
+Route::post('/update_slide/{slide_id}', 'SlideController@update')->name('update_slide');
 Route::post('/destroy_slide/{slide_id}', 'SlideController@destroy')->name('destroy_slide');
 
 //Event

@@ -9,6 +9,7 @@ use NNAK\Link;
 use NNAK\Page;
 use Illuminate\Http\Request;
 use Auth;
+use NNAK\Slide;
 
 class PageController extends Controller
 {
@@ -82,6 +83,7 @@ class PageController extends Controller
             'links' => Link::all(),
             'home_components' => Component::where('name', 'LIKE','Home%')->get(),
             'benefit_components' => Component::where('name', 'LIKE','Benefit%')->get(),
+            'slides' => Slide::all(),
         ];
         return view('index', $context);
     }

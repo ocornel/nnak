@@ -19,7 +19,7 @@ class CreateSlidesTable extends Migration
             $table->string('tagline');
             $table->longText('content');
             $table->string('image_url')->nullable();
-            $table->unsignedInteger('page_id');
+            $table->unsignedInteger('page_id')->nullable();
             $table->timestamps();
         });
     }

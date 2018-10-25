@@ -197,3 +197,12 @@ footer .widget h5 {
     opacity: .4;
     background: var(--nnak-green);
 }
+
+.nnak-slide {
+    min-height: 450px;
+    max-height: 450px;
+}
+
+.slide-image {
+    max-height: 400px;
+}

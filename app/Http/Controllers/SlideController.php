@@ -2,6 +2,7 @@
 
 namespace NNAK\Http\Controllers;
 
+use NNAK\Page;
 use NNAK\Slide;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,11 @@ class SlideController extends Controller
      */
     public function create()
     {
-        //
+        $context = [
+            'pages' => Page::all(),
+        ];
+
+        return view('slide.create', $context);
     }
 
     /**
@@ -38,7 +43,18 @@ class SlideController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new_slide = Slide::create($request->all());
+
+        if ($request->has('slide_image')) {
+            $file = $request->file('slide_image');
+            $name = time() . '_' . $file->getClientOriginalName();
+            $destination = './img/slides';
+            $file->move($destination, $name);
+            $new_slide->image_url = substr($destination, 2)."/".$name;
+            $new_slide->save();
+        }
+
+        return redirect(route('slide'))->with('success', 'Slide added successfully');
     }
 
     /**
@@ -49,38 +65,36 @@ class SlideController extends Controller
      */
     public function show(Slide $slide)
     {
-        //
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \NNAK\Slide  $slide
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Slide $slide)
+    public function edit($slide_id)
     {
-        //
+        $context = [
+            'slide' => Slide::find($slide_id),
+            'pages' => Page::all(),
+        ];
+
+        return view('slide.create', $context);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \NNAK\Slide  $slide
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Slide $slide)
+    public function update(Request $request, $slide_id)
     {
-        //
+        $slide = Slide::find($slide_id);
+        $slide->update($request->all());
+
+        if ($request->has('slide_image')) {
+            $file = $request->file('slide_image');
+            $name = time() . '_' . $file->getClientOriginalName();
+            $destination = './img/slides';
+            $file->move($destination, $name);
+            $slide->image_url = substr($destination, 2)."/".$name;
+            $slide->save();
+        }
+
+        return redirect(route('slide'))->with('success', 'Slide updated successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \NNAK\Slide  $slide
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Slide $slide)
     {
         //
