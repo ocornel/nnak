@@ -50,9 +50,9 @@ Route::post('/update_image{image_id}', 'ImageController@update')->name('update_i
 Route::get('/member', 'MemberController@index')->name('member');
 Route::get('/create_member', 'MemberController@create')->name('new_member');
 Route::post('/store_member', 'MemberController@store')->name('store_member');
-Route::get('/show_member', 'MemberController@show')->name('show_member');
+Route::get('/show_member/{member_id}', 'MemberController@show')->name('show_member');
 Route::get('/edit_member/{member_id}', 'MemberController@edit')->name('edit_member');
-Route::post('/update_member', 'MemberController@update')->name('update_member');
+Route::post('/update_member/{member_id}', 'MemberController@update')->name('update_member');
 Route::get('/destroy_member/{member_id}', 'MemberController@destroy')->name('destroy_member');
 
 //User

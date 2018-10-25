@@ -27,7 +27,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        //
+        return view('member.create');
     }
 
     /**
@@ -38,7 +38,18 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $new_member = Member::create($request->all());
+        if ($request->has('member_image')) {
+            $file = $request->file('member_image');
+            $name = time() . '_' . $file->getClientOriginalName();
+            $destination = './img/members';
+            $file->move($destination, $name);
+            $new_member->image_url = substr($destination, 2)."/".$name;
+            $new_member->save();
+        }
+
+        return redirect(route('member'))->with('success', 'Member added successfully');
     }
 
     /**
@@ -58,9 +69,13 @@ class MemberController extends Controller
      * @param  \NNAK\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function edit(Member $member)
+    public function edit($member_id)
     {
-        //
+        $context = [
+            'member' => Member::find($member_id),
+        ];
+
+        return view('member.create', $context);
     }
 
     /**
@@ -70,9 +85,21 @@ class MemberController extends Controller
      * @param  \NNAK\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Member $member)
+    public function update(Request $request,  $member_id)
     {
-        //
+        $member = Member::find($member_id);
+        $member->update($request->all());
+
+        if ($request->has('member_image')) {
+            $file = $request->file('member_image');
+            $name = time() . '_' . $file->getClientOriginalName();
+            $destination = './img/members';
+            $file->move($destination, $name);
+            $member->image_url = substr($destination, 2)."/".$name;
+            $member->save();
+        }
+
+        return redirect(route('member'))->with('success', 'Member updated successfully');
     }
 
     /**
@@ -81,8 +108,9 @@ class MemberController extends Controller
      * @param  \NNAK\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Member $member)
+    public function destroy($member_id)
     {
-        //
+        Member::find($member_id)->delete();
+        return redirect(route('member'))->with('success', 'Member deleted');
     }
 }

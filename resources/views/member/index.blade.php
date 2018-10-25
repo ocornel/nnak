@@ -19,7 +19,8 @@
                         <li><b>Created On: </b><span class="pull-right">{{$member->created_at}}</span></li>
                         <li><b>Updated On: </b><span class="pull-right">{{$member->updated_at}}</span></li>
                         <li><b>Profile:</b> {{$member->profile}}</li>
-                        <li><span class="pull-right"><a href="{{route('edit_member', $member->id)}}" class="btn btn-primary">Edit</a></span></li>
+                        <li class="pull-right"><span><a href="{{route('edit_member', $member->id)}}" class="btn btn-success"><i class="fa fa-edit"> Edit</i></a></span> &nbsp;
+                            <span class="text-danger"><a href="{{route('destroy_member', $member->id)}}" class="btn btn-danger"><i class="fa fa-trash"> Delete</i></a></span></li>      
                     </ul>
                 </div>
             </div>
