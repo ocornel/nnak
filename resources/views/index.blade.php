@@ -157,32 +157,34 @@
     <!-- /Section: intro -->
 
     <!-- Section: boxes -->
-    <section id="boxes" class="home-section paddingtop-80">
 
-        <div class="container">
+    {{----}}
+    {{--<section id="boxes" class="home-section paddingtop-80">--}}
 
-            <div class="slides">
+        {{--<div class="container">--}}
 
-            </div>
-            <div class="row">
-                @forelse($home_components as $component)
-                    <div class="col-sm-3 col-md-3">
-                        <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="box text-center">
-                                <i class="fa {{$component->icon}} fa-3x circled bg-skin"></i>
-                                <h4 class="h-bold">{{$component->title}}</h4>
-                                <p>
-                                    {{$component->content}}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                @empty
-                @endforelse
-            </div>
-        </div>
+            {{--<div class="slides">--}}
 
-    </section>
+            {{--</div>--}}
+            {{--<div class="row">--}}
+                {{--@forelse($home_components as $component)--}}
+                    {{--<div class="col-sm-3 col-md-3">--}}
+                        {{--<div class="wow fadeInUp" data-wow-delay="0.2s">--}}
+                            {{--<div class="box text-center">--}}
+                                {{--<i class="fa {{$component->icon}} fa-3x circled bg-skin"></i>--}}
+                                {{--<h4 class="h-bold">{{$component->title}}</h4>--}}
+                                {{--<p>--}}
+                                    {{--{{$component->content}}--}}
+                                {{--</p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--@empty--}}
+                {{--@endforelse--}}
+            {{--</div>--}}
+        {{--</div>--}}
+
+    {{--</section>--}}
     <!-- /Section: boxes -->
 
 
@@ -296,7 +298,12 @@
                             <li class="cbp-item {{$member->role}}">
                                 <a href="{{route('show_member', $member->id)}}" class="cbp-caption cbp-singlePage">
                                     <div class="cbp-caption-defaultWrap">
+                                        @if($member->image_url != null)
                                         <img src="{{ URL::to($member->image_url)}}" alt="" width="100%">
+                                            @else
+                                        <img src="{{ URL::to('img/no_image_profile')}}" alt="" width="100%">
+
+                                        @endif
                                     </div>
                                     <div class="cbp-caption-activeWrap">
                                         <div class="cbp-l-caption-alignCenter">

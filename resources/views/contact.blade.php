@@ -22,27 +22,27 @@
 
 @section('content')
     <!-- Section: contact -->
-    <section id="contact" class="home-section nopadding paddingtop-60">
+    {{--<section id="contact" class="home-section nopadding paddingtop-60">--}}
 
-        <div class="container paddingtop-100">
+        {{--<div class="container paddingtop-100">--}}
 
-            <div class="row">
-                <div class="col-sm-9 col-md-9">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        [After you share your actual physical location, I will change this map to reflect the address.]
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.790475957992!2d36.80523381446791!3d-1.3005710360080527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10ec473dcd5b%3A0xc80b90a3fcf36781!2sNational+Nurses+Association+Of+Kenya!5e0!3m2!1sen!2ske!4v1538191670322" width="100%" height="450" frameborder="1" style="border:0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    Detailed contact details will be included here
-                </div>
+            {{--<div class="row">--}}
+                {{--<div class="col-sm-9 col-md-9">--}}
+                    {{--<div class="wow fadeInUp" data-wow-delay="0.2s">--}}
+                        {{--[After you share your actual physical location, I will change this map to reflect the address.]--}}
+                        {{--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.790475957992!2d36.80523381446791!3d-1.3005710360080527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10ec473dcd5b%3A0xc80b90a3fcf36781!2sNational+Nurses+Association+Of+Kenya!5e0!3m2!1sen!2ske!4v1538191670322" width="100%" height="450" frameborder="1" style="border:0" allowfullscreen></iframe>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="col-sm-3 col-md-3">--}}
+                    {{--Detailed contact details will be included here--}}
+                {{--</div>--}}
 
-            </div>
-        </div>
-    </section>
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</section>--}}
     <!-- /Section: services -->
 
-    <!-- Section: testimonial -->
+    <!-- Section: contact Form -->
     <section id="form" class="home-section paddingbot-60 parallax testimonial" data-stellar-background-ratio="0.5">
 
         <div class="carousel-reviews broun-block">

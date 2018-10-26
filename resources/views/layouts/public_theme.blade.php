@@ -68,6 +68,8 @@
                 <h5>Links</h5>
                 <ul>
                   <li><a href="{{ route('about') }}">About Us</a></li>
+                  <li><a href="https://osp.nckenya.com">Nursing council of Kenya portal</a></li>
+                  <li><a href="https://www.nnak.or.ke">Nationa Nurses Association of Kenya</a></li>
                   <li><a href="{{ route('contact') }}">Contact Us</a></li>
                   <li><a href="{{ route('events') }}">Events</a></li>
                     <br>
@@ -129,8 +131,8 @@
               <div class="widg et">
                 <h5>Follow us</h5>
                 <ul class="company-social">
-                  <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="social-facebook"><a href="{{\NNAK\Page::info('facebook')}}"><i class="fa fa-facebook"></i></a></li>
+                  <li class="social-twitter"><a href="{{\NNAK\Page::info('twitter')}}"><i class="fa fa-twitter"></i></a></li>
                   <li class="social-vimeo"><a href="https://www.nnak.or.ke/"><i class="fa fa-globe"></i></a></li>
                 </ul>
               </div>

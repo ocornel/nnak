@@ -1,5 +1,5 @@
 @extends('layouts.portal_theme')
-@section('title') New Member @endsection
+@section('title') {{isset($member) ? "Edit Member": "New Member"}} @endsection
 @section('content')
     <div class="container">
         <form action="{{ isset($member) ? route('update_member', $member->id) : route('store_member')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
@@ -62,7 +62,7 @@
                         <div class="col-12 col-md-10">
                             <input type="file" accept="image/png, image/jpeg" id="icon_url"
                                    class="form-control" name="member_image"
-                                   @if(!isset($member))required @endif
+                                   @if(!isset($member)) @endif
                                    value="{{isset($member) ? $member->image_url  : old('member_image')}}">
                             @if(isset($member))
                             <img style="max-width: 50%" id="image_url"
