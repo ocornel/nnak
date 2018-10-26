@@ -133,7 +133,7 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-                                        <img src="{{ URL::to('img/first_slide.JPG')}}" class="img-responsive slide-image" alt="" />
+                                        <img src="{{ URL::to('img/first_slide.png')}}" class="img-responsive slide-image" alt="" />
                                     </div>
                                 </div>
                             </div>
