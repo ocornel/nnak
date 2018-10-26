@@ -50,6 +50,30 @@
                         </div>
                     </div>
 
+                        <div class="row form-group">
+                            <div class="col col-md-2">
+                                <label for="slide_image" class=" form-control-label">Uploads</label>
+                            </div>
+                            <div class="col-12 col-md-10">
+                                <small class="form-text text-muted">{{isset($event) ? "Current Event Images. You may add,": "Upload The event images."}}</small>
+                                @if(isset($event))
+                                    <div class="row">
+                                        @foreach($event->getImages() as $image)
+                                            <div class="col-md-4 col-lg-3 col-sm-6">
+                                                <img style="max-width: 100%" id=""
+                                                     src="../{{$image->image_url}}"
+                                                />
+                                            </div>
+                                        @endforeach
+                                    </div>
+
+                                @endif
+                                <input type="file" accept="image/png, image/jpeg" id="image_url"
+                                       class="form-control" name="event_images[]" multiple />
+                            </div>
+                        </div>
+
+
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary btn-sm pull-right">

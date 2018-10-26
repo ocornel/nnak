@@ -4,6 +4,7 @@ namespace NNAK\Http\Controllers;
 
 use NNAK\Event;
 use Illuminate\Http\Request;
+use NNAK\Image;
 use NNAK\Link;
 use NNAK\Page;
 use Auth;
@@ -39,11 +40,27 @@ class EventController extends Controller
             'url' => $new_page->url.'/p'.$new_page->id
         ]);
 
-        Event::create([
+        $event = Event::create([
             'date' => $request->date,
             'intro' => $request->intro,
             'page_id' =>$new_page->id,
         ]);
+
+        if ($request->has('event_images')) {
+            $files = $request->file('event_images');
+            foreach ($files as $file) {
+                $name = time() . '_' . $file->getClientOriginalName();
+                $destination = './img/events';
+                $file->move($destination, $name);
+                Image::create([
+                    'on_gallery' => rand(0,1),
+                    'image_url' => substr($destination, 2)."/".$name,
+                    'caption' => $new_page->title,
+                    'description' => $event->intro,
+                    'event_id' => $event->id
+                ]);
+            }
+        }
 
         return redirect(route('visit_page', ['PREVIEW '.$new_page->title, $new_page->id]))->with('success', "Page created successfully");
     }
@@ -69,6 +86,24 @@ class EventController extends Controller
         $page = $event->getPage();
         $page->update($request->all());
         $event->update($request->all());
+
+        if ($request->has('event_images')) {
+            $files = $request->file('event_images');
+            foreach ($files as $file) {
+//                $file = $request->file('slide_image');
+                $name = time() . '_' . $file->getClientOriginalName();
+                $destination = './img/events';
+                $file->move($destination, $name);
+                Image::create([
+                    'on_gallery' => rand(0,1),
+                    'image_url' => substr($destination, 2)."/".$name,
+                    'caption' => $page->title,
+                    'description' => $event->intro,
+                    'event_id' => $event_id
+                ]);
+            }
+        }
+
         return redirect(route('visit_page', ['PREVIEW '.$page->title, $page->id]))->with('success', "Page updated successfully");
     }
 

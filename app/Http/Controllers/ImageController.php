@@ -88,8 +88,9 @@ class ImageController extends Controller
      * @param  \NNAK\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Image $image)
+    public function destroy($image_id)
     {
-        //
+        Image::find($image_id)->delete();
+        return redirect(route('image'))->with('success', 'Image has been deleted.');
     }
 }

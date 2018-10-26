@@ -3,7 +3,7 @@
 @section('active_content') active @endsection
 @section('content')
     <div class="container portal-content">
-        These are the images that have been uploaded in the system and their context of upload. You may edit.
+        These are the images that have been uploaded in the system while creating an event or a slide. You may edit.
         @forelse($images as $image)
             <hr>
             <div class="row">
@@ -18,12 +18,13 @@
                         <li><b>Created On: </b><span class="pull-right">{{\Carbon\Carbon::parse($image->created_at)->format('d M, Y H:i')}}</span></li>
                         <li><b>Updated On: </b><span class="pull-right">{{\Carbon\Carbon::parse($image->updated_at)->format('d M, Y H:i')}}</span></li>
                         <li><b>Description:</b> {{$image->description}}</li>
-                        <li><span class="pull-right"><a href="{{route('edit_image', $image->id)}}" class="btn btn-primary">Edit</a></span></li>
-                    </ul>
+                        <li class="pull-right"><span><a href="{{route('edit_image', $image->id)}}" class="btn btn-success"><i class="fa fa-edit"> Edit</i></a></span> &nbsp;
+                            <span class="text-danger"><a href="{{route('destroy_image', $image->id)}}" class="btn btn-danger"><i class="fa fa-trash"> Delete</i></a></span></li>                        </ul>
                 </div>
             </div>
         @empty
-            <tr>Nothing to show</tr>
+            <hr>
+            <p>Nothing to show</p>
         @endforelse
     </div>
 @endsection

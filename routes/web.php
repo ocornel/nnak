@@ -45,6 +45,7 @@ Route::post('/store_image', 'ImageController@store')->name('store_image');
 Route::get('/show_image/{image_id}', 'ImageController@show')->name('show_image');
 Route::get('/edit_image/{image_id}', 'ImageController@edit')->name('edit_image');
 Route::post('/update_image{image_id}', 'ImageController@update')->name('update_image');
+Route::get('/destroy_image/{image_id}', 'ImageController@destroy')->name('destroy_image');
 
 //Member
 Route::get('/member', 'MemberController@index')->name('member');
