@@ -95,9 +95,12 @@
                 <ul>
                   <li class="row ml-5">
                     <span class="fa-stack fa-lg col-xs-2">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
-								</span> <span class="col-xs-10">Mombasa Town <br> Bla blabla street</span>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="col-xs-10">
+                      {{ Page::info('phone_1') }}
+                    </span>
                   </li>
                   <li class="row ml-5">
                     <span class="fa-stack fa-lg col-xs-2">
@@ -105,7 +108,6 @@
                         <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
                     </span>
                     <span class="col-xs-10">
-                      {{ Page::info('phone_1') }} <br>
                       {{ Page::info('phone_2') }}
                     </span>
                   </li>

@@ -30,89 +30,115 @@
                 <div id="carousel-reviews" class="carousel slide nnak-slide" data-ride="carousel">
 
                     <div class="carousel-inner">
+                        {{--<div class="item active">--}}
+                            {{--<div class="row">--}}
+                                {{--<div class="col-lg-6">--}}
+                                    {{--<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">--}}
+                                        {{--<h2 class="h-ultra">Slider 2 Title</h2>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">--}}
+                                        {{--<h4 class="h-light">Slider 2 tagline <span class="txt-blue">with formatted</span> text</h4>--}}
+                                    {{--</div>--}}
+                                    {{--<div class="well well-trans">--}}
+                                        {{--<div class="wow fadeInRight" data-wow-delay="0.1s">--}}
+
+                                            {{--<ul class="lead-list">--}}
+                                                {{--<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Formatted list item 1 </strong><br />Brief desciption. Just showing what could be done with this space</span></li>--}}
+                                                {{--<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Formatted list item 2 </strong><br />Brief desciption. Just showing what could be done with this space</span></li>--}}
+                                                {{--<li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Formatted list item 3 </strong><br />Brief desciption. Just showing what could be done with this space</span></li>--}}
+                                            {{--</ul>--}}
+
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+
+                                {{--</div>--}}
+                                {{--<div class="col-lg-6">--}}
+                                    {{--<div class="form-wrapper">--}}
+                                        {{--<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">--}}
+
+                                            {{--<div class="panel panel-skin">--}}
+                                                {{--<div class="panel-heading">--}}
+                                                    {{--<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Call to Action <small>(Request a callback !)</small></h3>--}}
+                                                {{--</div>--}}
+                                                {{--<div class="panel-body">--}}
+                                                    {{--<div id="sendmessage">Your message has been sent. Thank you!</div>--}}
+                                                    {{--<div id="errormessage"></div>--}}
+
+                                                    {{--<form action="" method="post" role="form" class="contactForm lead">--}}
+                                                        {{--<div class="row">--}}
+                                                            {{--<div class="col-xs-6 col-sm-6 col-md-6">--}}
+                                                                {{--<div class="form-group">--}}
+                                                                    {{--<label>First Name</label>--}}
+                                                                    {{--<input type="text" name="first_name" id="first_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">--}}
+                                                                    {{--<div class="validation"></div>--}}
+                                                                {{--</div>--}}
+                                                            {{--</div>--}}
+                                                            {{--<div class="col-xs-6 col-sm-6 col-md-6">--}}
+                                                                {{--<div class="form-group">--}}
+                                                                    {{--<label>Last Name</label>--}}
+                                                                    {{--<input type="text" name="last_name" id="last_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">--}}
+                                                                    {{--<div class="validation"></div>--}}
+                                                                {{--</div>--}}
+                                                            {{--</div>--}}
+                                                        {{--</div>--}}
+
+                                                        {{--<div class="row">--}}
+                                                            {{--<div class="col-xs-6 col-sm-6 col-md-6">--}}
+                                                                {{--<div class="form-group">--}}
+                                                                    {{--<label>Email</label>--}}
+                                                                    {{--<input type="email" name="email" id="email" class="form-control input-md" data-rule="email" data-msg="Please enter a valid email">--}}
+                                                                    {{--<div class="validation"></div>--}}
+                                                                {{--</div>--}}
+                                                            {{--</div>--}}
+                                                            {{--<div class="col-xs-6 col-sm-6 col-md-6">--}}
+                                                                {{--<div class="form-group">--}}
+                                                                    {{--<label>Phone number</label>--}}
+                                                                    {{--<input type="text" name="phone" id="phone" class="form-control input-md" data-rule="required" data-msg="The phone number is required">--}}
+                                                                    {{--<div class="validation"></div>--}}
+                                                                {{--</div>--}}
+                                                            {{--</div>--}}
+                                                        {{--</div>--}}
+
+                                                        {{--<input type="submit" value="Submit" class="btn btn-skin bg-blue btn-block btn-lg">--}}
+
+                                                        {{--<p class="lead-footer">* We'll contact you by phone & email later</p>--}}
+
+                                                    {{--</form>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
                         <div class="item active">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-4">
                                     <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                                        <h2 class="h-ultra">Slider 2 Title</h2>
+                                        <h2 class="h-ultra">Welcome</h2>
                                     </div>
                                     <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-                                        <h4 class="h-light">Slider 2 tagline <span class="txt-blue">with formatted</span> text</h4>
+                                        <h4 class="h-light">NNAK-PIB Mombasa County</h4>
                                     </div>
                                     <div class="well well-trans">
                                         <div class="wow fadeInRight" data-wow-delay="0.1s">
-
-                                            <ul class="lead-list">
-                                                <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Formatted list item 1 </strong><br />Brief desciption. Just showing what could be done with this space</span></li>
-                                                <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Formatted list item 2 </strong><br />Brief desciption. Just showing what could be done with this space</span></li>
-                                                <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Formatted list item 3 </strong><br />Brief desciption. Just showing what could be done with this space</span></li>
-                                            </ul>
-
+                                            We are ...
+                                            <p class="text-right wow bounceIn" data-wow-delay="0.4s">
+                                                <a href="{{route('about')}}" class="btn btn-skin btn-lg">Read more <i class="fa fa-angle-right"></i></a>
+                                            </p>
                                         </div>
                                     </div>
-
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="form-wrapper">
-                                        <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-
-                                            <div class="panel panel-skin">
-                                                <div class="panel-heading">
-                                                    <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Call to Action <small>(Request a callback !)</small></h3>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <div id="sendmessage">Your message has been sent. Thank you!</div>
-                                                    <div id="errormessage"></div>
-
-                                                    <form action="" method="post" role="form" class="contactForm lead">
-                                                        <div class="row">
-                                                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                                                <div class="form-group">
-                                                                    <label>First Name</label>
-                                                                    <input type="text" name="first_name" id="first_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">
-                                                                    <div class="validation"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                                                <div class="form-group">
-                                                                    <label>Last Name</label>
-                                                                    <input type="text" name="last_name" id="last_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">
-                                                                    <div class="validation"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                                                <div class="form-group">
-                                                                    <label>Email</label>
-                                                                    <input type="email" name="email" id="email" class="form-control input-md" data-rule="email" data-msg="Please enter a valid email">
-                                                                    <div class="validation"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                                                <div class="form-group">
-                                                                    <label>Phone number</label>
-                                                                    <input type="text" name="phone" id="phone" class="form-control input-md" data-rule="required" data-msg="The phone number is required">
-                                                                    <div class="validation"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <input type="submit" value="Submit" class="btn btn-skin bg-blue btn-block btn-lg">
-
-                                                        <p class="lead-footer">* We'll contact you by phone & email later</p>
-
-                                                    </form>
-                                                </div>
-                                            </div>
-
-                                        </div>
+                                <div class="col-lg-8">
+                                    <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                                        <img src="{{ URL::to('img/first_slide.JPG')}}" class="img-responsive slide-image" alt="" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        
                     @foreach($slides as $slide)
                         <div class="item">
                             <div class="row">
@@ -302,7 +328,6 @@
                                         <img src="{{ URL::to($member->image_url)}}" alt="" width="100%">
                                             @else
                                         <img src="{{ URL::to('img/no_image_profile')}}" alt="" width="100%">
-
                                         @endif
                                     </div>
                                     <div class="cbp-caption-activeWrap">
