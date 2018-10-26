@@ -90,7 +90,11 @@ class ImageController extends Controller
      */
     public function destroy($image_id)
     {
+        $image = Image::find($image_id);
+        $filename = $image->image_url;
+        unlink($filename);
         Image::find($image_id)->delete();
+
         return redirect(route('image'))->with('success', 'Image has been deleted.');
     }
 }
