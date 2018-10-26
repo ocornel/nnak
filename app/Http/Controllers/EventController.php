@@ -109,7 +109,11 @@ class EventController extends Controller
 
     public function destroy($event_id)
     {
-        Event::find($event_id)->delete();
+        $event = Event::find($event_id);
+        foreach ($event->getImages() as $image) {
+            $image->delete();
+        }
+        $event->delete();
         return redirect(route('event'))->with('success', 'Event deleted.');
     }
 }
