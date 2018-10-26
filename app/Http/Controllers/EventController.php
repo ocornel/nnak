@@ -107,8 +107,9 @@ class EventController extends Controller
         return redirect(route('visit_page', ['PREVIEW '.$page->title, $page->id]))->with('success', "Page updated successfully");
     }
 
-    public function destroy(Event $event)
+    public function destroy($event_id)
     {
-        //
+        Event::find($event_id)->delete();
+        return redirect(route('event'))->with('success', 'Event deleted.');
     }
 }
