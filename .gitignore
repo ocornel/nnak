@@ -5,6 +5,10 @@
 /.idea
 /.vagrant
 /.phpintel
+/public/events
+/public/members
+/public/partners
+/public/slides
 Homestead.json
 Homestead.yaml
 npm-debug.log
