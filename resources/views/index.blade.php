@@ -282,7 +282,7 @@
                             <div class="cbp-filter-counter"></div>)
                         </div>
                         @foreach($roles as $role)
-                        <div data-filter=".{{$role}}" class="cbp-filter-item">{{$role}}
+                        <div data-filter=".{{str_replace(' ', '_', $role)}}" class="cbp-filter-item">{{$role}}
                             (<div class="cbp-filter-counter"></div>)
                         </div>
                         @endforeach
@@ -295,7 +295,7 @@
                     <div id="grid-container" class="cbp-l-grid-team">
                         <ul>
                             @foreach($members as $member)
-                            <li class="cbp-item {{$member->role}}">
+                            <li class="cbp-item {{str_replace(' ', '_', $member->role)}}">
                                 <a href="{{route('show_member', $member->id)}}" class="cbp-caption cbp-singlePage">
                                     <div class="cbp-caption-defaultWrap">
                                         @if($member->image_url != null)

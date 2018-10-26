@@ -281,7 +281,17 @@
 
     <!-- PAGE CONTENT-->
     <div class="page-content--bgf7 portal-content">
-        {{--TODO put success or error message after actions--}}
+
+        @if(Session::has('success'))
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="message" class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
+                </div>
+            </div>
+        @endif
+
         @yield('content')
 
         <!-- COPYRIGHT-->
