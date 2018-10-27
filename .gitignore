@@ -1,16 +1,16 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/.idea
-/.vagrant
-/.phpintel
-/public/img/events
-/public/img/members
-/public/img/partners
-/public/img/slides
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-.env
+# /node_modules
+# /public/hot
+# /public/storage
+# /storage/*.key
+# /.idea
+# /.vagrant
+# /.phpintel
+# /public/img/events
+# /public/img/members
+# /public/img/partners
+# /public/img/slides
+# Homestead.json
+# Homestead.yaml
+# npm-debug.log
+# yarn-error.log
+# .env
