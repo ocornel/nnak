@@ -255,12 +255,12 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-4 col-md-4">
                     <div class="wow fadeInUp" data-wow-delay="0.2s" align="right">
                         <img src="{{ URL::to('img/Checklist.jpg')}}" class="img-responsive" alt="" />
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-8 col-md-8">
                     <div class="row">
                         @forelse($benefit_components as $component)
                         <div class="wow fadeInRight col-sm-6 col-md-6" data-wow-delay="0.1s">
