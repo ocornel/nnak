@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-12 col-md-9">
                             <input type="text" id="content" name="content" placeholder="Type here" class="form-control" required value="{{$component->content}}">
-                            <small class="form-text text-muted">This is the {{$component->content}} on the website.</small>
+                            <small class="form-text text-muted">This is the {{$component->title}} on the website.</small>
                         </div>
                     </div>
                     <div class="row form-group">
