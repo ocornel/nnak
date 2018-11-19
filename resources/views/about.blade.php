@@ -125,9 +125,8 @@
                     <div class="callaction bg-gray">
                         <div class="wow fadeInUp" data-wow-delay="0.1s">
                             <div class="cta-text">
-                                <h3>Message from the chair</h3>
-                                <p>The message from the chair person goes here. Could be as long as you wish. </p>
-                                <p>Will provide a resourceful text editor to allow for formatting including addition of images</p>
+                                <h3>{{$message->title}} <span class="text-tiny">{{\Carbon\Carbon::parse($message->updated_at)->format('d M, Y')}}</span></h3>
+                                {!! $message->content !!}
                             </div>
                         </div>
                     </div>

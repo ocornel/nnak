@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use NNAK\Event;
 use NNAK\Image;
 use NNAK\Member;
+use NNAK\Message;
 use NNAK\Page;
 use NNAK\Partner;
 use NNAK\Slide;
@@ -34,7 +35,8 @@ class HomeController extends Controller
             'member_count' => Member::all()->count(),
             'event_count' =>Event::all()->count(),
             'partner_count' =>Partner::all()->count(),
-            'slide_count' =>Slide::all()->count()
+            'slide_count' =>Slide::all()->count(),
+            'message' => Message::all()->last(),
         ];
         return view('admin.home', $context);
     }

@@ -8,6 +8,7 @@ use NNAK\Event;
 use NNAK\Image;
 use NNAK\Link;
 use NNAK\Member;
+use NNAK\Message;
 use NNAK\Page;
 use Illuminate\Http\Request;
 use Auth;
@@ -108,6 +109,7 @@ class PageController extends Controller
     public function about_page() {
         $context = [
             'links' => Link::all(),
+            'message' => Message::all()->last()
         ];
             return view('about', $context);
     }

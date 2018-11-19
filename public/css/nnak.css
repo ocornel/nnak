@@ -191,6 +191,10 @@ footer .widget h5 {
     min-height: 70vh;
 }
 
+.text-tiny {
+    font-size: x-small;
+}
+
 .lost-message {
     margin-top: 15vh;
     text-align: center;
