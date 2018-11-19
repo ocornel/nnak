@@ -1,5 +1,5 @@
 <div class="cbp-l-member-img">
-	<img src="{{$member->image_url}}" alt="">
+	<img src="{{$member->image_url}}" alt="" class="member-profile">
 </div>
 <div class="cbp-l-member-info">
 	<div class="cbp-l-member-name">{{$member->name}}</div>

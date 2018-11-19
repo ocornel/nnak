@@ -62,7 +62,7 @@ Route::get('/create_user', 'UserController@create')->name('new_user');
 Route::post('/store_user', 'UserController@store')->name('store_user');
 Route::get('/show_user/{user_id}', 'UserController@show')->name('show_user');
 Route::get('/edit_user/{user_id}', 'UserController@edit')->name('edit_user');
-Route::post('/update_user', 'UserController@update')->name('update_user');
+Route::post('/update_user/{user_id}', 'UserController@update')->name('update_user');
 Route::get('/destroy_user/{user_id}', 'UserController@destroy')->name('destroy_user');
 
 //Testimonial

@@ -342,6 +342,7 @@
     });
 </script>
 @yield('scripts')
+@yield('added_scripts')
 </body>
 
 </html>

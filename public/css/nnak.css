@@ -187,6 +187,10 @@ footer .widget h5 {
     /*height: 100vh;*/
 }
 
+.not-here {
+    min-height: 70vh;
+}
+
 .lost-message {
     margin-top: 15vh;
     text-align: center;
@@ -215,4 +219,8 @@ footer .widget h5 {
 .logo-text {
     font-size: 35px;
     margin-top: 20px;
+}
+
+.member-profile {
+    max-width: 30vw;
 }
