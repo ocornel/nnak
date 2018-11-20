@@ -2,10 +2,10 @@
 
 namespace NNAK\Http\Controllers;
 
-use NNAK\Message;
+use NNAK\Document;
 use Illuminate\Http\Request;
 
-class MessageController extends Controller
+class DocumentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class MessageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \NNAK\Message  $message
+     * @param  \NNAK\Document  $document
      * @return \Illuminate\Http\Response
      */
-    public function show(Message $message)
+    public function show(Document $document)
     {
         //
     }
@@ -52,35 +52,33 @@ class MessageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \NNAK\Message  $message
+     * @param  \NNAK\Document  $document
      * @return \Illuminate\Http\Response
      */
-    public function edit(Message $message)
+    public function edit(Document $document)
     {
-        $message = Message::find(1);
-        return view('message.create', ['message'=>$message]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \NNAK\Message  $message
+     * @param  \NNAK\Document  $document
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Message $message)
+    public function update(Request $request, Document $document)
     {
-        Message::find(1)->update($request->all());
-        return redirect(route('home'))->with('success', "Chairman's message successfully updated.");
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \NNAK\Message  $message
+     * @param  \NNAK\Document  $document
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Message $message)
+    public function destroy(Document $document)
     {
         //
     }

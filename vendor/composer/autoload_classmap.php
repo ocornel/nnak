@@ -1647,6 +1647,7 @@ return array(
     'Monolog\\Utils' => $vendorDir . '/monolog/monolog/src/Monolog/Utils.php',
     'NNAK\\Component' => $baseDir . '/app/Component.php',
     'NNAK\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'NNAK\\Document' => $baseDir . '/app/Document.php',
     'NNAK\\Event' => $baseDir . '/app/Event.php',
     'NNAK\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'NNAK\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',

@@ -1958,6 +1958,7 @@ class ComposerStaticInitb3be0dcc17f9d94418f6e6a595dee15c
         'Monolog\\Utils' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Utils.php',
         'NNAK\\Component' => __DIR__ . '/../..' . '/app/Component.php',
         'NNAK\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'NNAK\\Document' => __DIR__ . '/../..' . '/app/Document.php',
         'NNAK\\Event' => __DIR__ . '/../..' . '/app/Event.php',
         'NNAK\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'NNAK\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
