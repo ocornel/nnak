@@ -81,7 +81,10 @@
                 <div class="col-md-6 col-lg-3">
                     <a href="{{route('edit_document', 2)}}" class="dash-action">Manage License form</a>
                 </div>
+                <div class="col-md-6 col-lg-3">
+                    <a href="{{route('tutorials')}}" class="dash-action">User Totorials</a>
                 </div>
+            </div>
         </div>
     </section>
     <!-- END STATISTIC-->

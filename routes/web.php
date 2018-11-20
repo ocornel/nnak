@@ -112,4 +112,6 @@ Route::get('/edit_chairman_message/', 'MessageController@edit')->name('edit_mess
 Route::post('/update_message/', 'MessageController@update')->name('update_message');
 Route::get('/edit_document/{document_id}', 'DocumentController@edit')->name('edit_document');
 Route::post('/update_document/{document_id}', 'DocumentController@update')->name('update_document');
+Route::get('/tutorials', 'TutorialController@index')->name('tutorials');
+
 
