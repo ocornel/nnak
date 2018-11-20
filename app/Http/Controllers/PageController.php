@@ -4,6 +4,7 @@ namespace NNAK\Http\Controllers;
 
 use Carbon\Carbon;
 use NNAK\Component;
+use NNAK\Document;
 use NNAK\Event;
 use NNAK\Image;
 use NNAK\Link;
@@ -98,6 +99,8 @@ class PageController extends Controller
             'partners' => Partner::all(),
             'members' => $members,
             'roles' => $roles,
+            'form_l' => Document::find(2),
+            'form_m' => Document::find(1),
         ];
         return view('index', $context);
     }

@@ -15,6 +15,9 @@ class CreateDocumentsTable extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('label');
+            $table->string('document_url')->nullable();
+            $table->string('tooltip')->default('Click to Download');
             $table->timestamps();
         });
     }

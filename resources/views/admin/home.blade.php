@@ -76,10 +76,10 @@
                     <a href="{{route('edit_message')}}" class="dash-action">Edit Chairman's Message.</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <a href="{{route('edit_document', 1)}}" class="dash-action">Manage Registration form</a>
+                    <a href="{{route('edit_document', 1)}}" class="dash-action">Manage Membership form</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <a href="{{route('edit_document', 2)}}" class="dash-action">Manage Membership terms</a>
+                    <a href="{{route('edit_document', 2)}}" class="dash-action">Manage License form</a>
                 </div>
                 </div>
         </div>

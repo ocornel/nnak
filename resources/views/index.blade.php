@@ -232,12 +232,12 @@
                                 <div class="row">
                                     <div class="wow lightSpeedIn col-md" data-wow-delay="0.1s">
                                         <div class="cta-btn">
-                                            <a href="#" class="btn btn-skin btn-lg"> <i class="fa fa-download"></i> Licence form</a>
+                                            <a href="{{$form_l->document_url}}" target="_blank" title="{{$form_l->tooltip}}" class="btn btn-skin btn-lg"> <i class="fa fa-download"></i> {{$form_l->label}}</a>
                                         </div>
                                     </div>
                                     <div class="wow lightSpeedIn  col-md" data-wow-delay="0.1s">
                                         <div class="cta-btn">
-                                            <a href="#" class="btn btn-skin btn-lg"> <i class="fa fa-download"></i> Membership form</a>
+                                            <a href="{{$form_m->document_url}}" target="_blank" title="{{$form_m->tooltip}}" class="btn btn-skin btn-lg"> <i class="fa fa-download"></i> {{$form_m->label}}</a>
                                         </div>
                                     </div>
                                 </div>

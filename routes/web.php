@@ -110,6 +110,6 @@ Route::post('/update_component/{component_id}', 'ComponentController@update')->n
 // Other stuff
 Route::get('/edit_chairman_message/', 'MessageController@edit')->name('edit_message');
 Route::post('/update_message/', 'MessageController@update')->name('update_message');
-Route::get('/edit_reg_document/{document_id}', 'DocumentController@edit')->name('edit_document');
+Route::get('/edit_document/{document_id}', 'DocumentController@edit')->name('edit_document');
 Route::post('/update_document/{document_id}', 'DocumentController@update')->name('update_document');
 

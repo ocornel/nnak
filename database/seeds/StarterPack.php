@@ -253,5 +253,11 @@ class StarterPack extends Seeder
             ]);
             $i ++; $j ++;
         }
+
+        /*
+         * Documents
+         */
+        Document::create(['label' => 'MEMBERSHIP FORM']);
+        Document::create(['label' => 'LICENCE FORM']);
     }
 }

@@ -55,9 +55,9 @@ class DocumentController extends Controller
      * @param  \NNAK\Document  $document
      * @return \Illuminate\Http\Response
      */
-    public function edit(Document $document)
+    public function edit($document_id)
     {
-        //
+        return view('document.create', ['document'=>Document::find($document_id)]);
     }
 
     /**
@@ -67,9 +67,24 @@ class DocumentController extends Controller
      * @param  \NNAK\Document  $document
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Document $document)
+    public function update(Request $request, $document_id)
     {
-        //
+        $document = Document::find($document_id);
+        $filename = $document->document_url;
+        if ($filename != null) {
+            unlink($filename);
+        }
+        if ($request->has('document')) {
+            $file = $request->file('document');
+            $name = time() . '_' . $file->getClientOriginalName();
+            $destination = './documents';
+            $file->move($destination, $name);
+            $request['document_url'] = substr($destination,2)."/".$name;
+        }
+
+        $document->update($request->all());
+
+        return redirect(route('home'))->with('success', "Document Updated successfully");
     }
 
     /**
